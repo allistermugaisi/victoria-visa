@@ -1,6 +1,6 @@
 # Victoria Visa Consultants
 
-We are a trustworthy and resourceful immigration consultants that will give you the best possible to live your dream.
+We are a trustworthy and resourceful visa consultants that will give you the best possible to live your dream.
 
 <!-- ![Alt text](/img/screen.png?raw=true) -->
 
