@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/contact.css" />
+
+		<!--========== BOX ICONS ==========-->
+		<link
+			href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- ============== Font awesome ============= -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		/>
+
+		<title>Victoria Visa Consultants</title>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="relative container mx-auto">
+			<!-- Flex container -->
+			<div class="flex items-center justify-around md:justify-between">
+				<!-- Logo -->
+				<div class="">
+					<a href="/" class="logo"></a>
+				</div>
+				<!-- Menu Items -->
+				<div class="hidden space-x-6 md:flex">
+					<a href="/" class="text-darkBlue hover:text-red-500 font-semibold"
+						>Home</a
+					>
+					<a
+						href="/visa.html"
+						class="text-darkBlue hover:text-red-500 font-semibold"
+						>Visa</a
+					>
+					<a
+						href="/about.html"
+						class="text-darkBlue hover:text-red-500 font-semibold"
+						>About</a
+					>
+					<a
+						href="/blog.html"
+						class="text-darkBlue hover:text-red-500 font-semibold"
+						>Blog</a
+					>
+					<a
+						href="/contact.html"
+						class="text-darkBlue hover:text-red-500 font-semibold"
+						>Contact</a
+					>
+				</div>
+				<!-- Button -->
+				<a
+					href="#"
+					class="hidden px-4 py-8 text-white uppercase tracking-normal bg-red-500 baseline hover:bg-darkBlue md:block ease-in duration-300"
+					>Get Consultation</a
+				>
+
+				<!-- Hamburger Icon -->
+				<button
+					id="menu-btn"
+					class="block hamburger md:hidden focus:outline-none"
+				>
+					<span class="hamburger-top"></span>
+					<span class="hamburger-middle"></span>
+					<span class="hamburger-bottom"></span>
+				</button>
+			</div>
+
+			<!-- Mobile Menu -->
+			<div class="md:hidden">
+				<div
+					id="menu"
+					class="z-[200] absolute rounded flex-col items-center hidden self-end text-white py-8 mt-4 space-y-6 font-bold bg-red-500 sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+				>
+					<a href="/">Home</a>
+					<a href="/visa.html">Visa</a>
+					<a href="/about.html">About</a>
+					<a href="/blog.html">Blog</a>
+					<a href="/contact.html">Contact</a>
+				</div>
+			</div>
+		</nav>
+	</body>
+</html>
