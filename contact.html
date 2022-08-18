@@ -93,59 +93,104 @@
 		<div class="bg-darkBlue py-14 px-7 md:px-0">
 			<div class="container mx-auto">
 				<h2 class="text-white text-5xl">Get in Touch</h2>
-				<p class="text-white font-light py-6 md:w-1/3">
+				<p class="text-white font-light text-lg py-6 md:w-1/3">
 					Please feel free to get in touch with us. We'd love to hear for you.
 				</p>
 			</div>
 		</div>
 
-		<div class="container mx-auto my-12 px-7 md:px-0">
-			<div class="md:w-1/2">
-				<div class="grid sm:grid-cols-3">
-					<div>
-						<img
-							class="w-3/4"
-							src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1657890324/Location-595b40b85ba036ed117db981_gbhnyz.svg"
-							alt=""
-						/>
-					</div>
-					<div class="col-span-2">
-						<h2 class="text-darkBlue text-3xl">Location</h2>
-						<h5 class="text-darkBlue">Kenya</h5>
-						<p class="opacity-80 font-light">
-							CornerHouse 6th floor along Kimathi Street.
-						</p>
-						<div class="pt-4">
-							<h5 class="text-darkBlue">Tanzania</h5>
-							<p class="opacity-80 font-light">
-								China Plaza 3rd floor Uhuru Muheza Street Dar Es Salaam.
+		<div class="container mx-auto grid lg:grid-cols-2 my-12 px-7 md:px-0">
+			<div>
+				<div class="md:w-3/4">
+					<div class="grid sm:grid-cols-3">
+						<div>
+							<img
+								class="w-3/4"
+								src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1657890324/Location-595b40b85ba036ed117db981_gbhnyz.svg"
+								alt=""
+							/>
+						</div>
+						<div class="col-span-2">
+							<h2 class="text-darkBlue text-3xl">Location</h2>
+							<h5 class="text-darkBlue text-lg">Kenya</h5>
+							<p class="opacity-80 font-light text-lg">
+								CornerHouse 6th floor along Kimathi Street.
 							</p>
+							<div class="pt-4">
+								<h5 class="text-darkBlue text-lg">Tanzania</h5>
+								<p class="opacity-80 font-light text-lg">
+									China Plaza 3rd floor Uhuru Muheza Street Dar Es Salaam.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="md:w-3/4 mt-12">
+					<div class="grid sm:grid-cols-3">
+						<div>
+							<img
+								class="w-3/4"
+								src="https://res.cloudinary.com/dgisuffs0/image/upload/v1657890324/customer-service-headset-svgrepo-com_bqdrrg.svg"
+								alt=""
+							/>
+						</div>
+						<div class="col-span-2">
+							<h2 class="text-darkBlue text-3xl">Quick Contact</h2>
+							<h5 class="text-darkBlue text-lg">Kenya</h5>
+							<p class="opacity-80 font-light text-lg">+254 731 999 376</p>
+							<p class="opacity-80 font-light text-lg">+254 737 295 966</p>
+							<div class="pt-4">
+								<h5 class="text-darkBlue text-lg">Tanzania</h5>
+								<p class="opacity-80 font-light text-lg">+255 657 860 936</p>
+								<p class="pt-4 opacity-80 font-light text-lg">
+									enquiry@victoriavisaconsultants.com
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="md:w-1/2 mt-12">
-				<div class="grid sm:grid-cols-3">
-					<div>
-						<img
-							class="w-3/4"
-							src="https://res.cloudinary.com/dgisuffs0/image/upload/v1657890324/customer-service-headset-svgrepo-com_bqdrrg.svg"
-							alt=""
+			<div>
+				<div class="bg-white shadow-2xl h-[673px]">
+					<h3 class="text-darkBlue px-4 py-6 font-medium text-2xl md:text-4xl">
+						Send Your Message
+					</h3>
+					<form action="" class="px-4 py-2">
+						<input
+							type="text"
+							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
+							placeholder="Full Name"
+							name="fullname"
+							id="name"
 						/>
-					</div>
-					<div class="col-span-2">
-						<h2 class="text-darkBlue text-3xl">Quick Contact</h2>
-						<h5 class="text-darkBlue">Kenya</h5>
-						<p class="opacity-80 font-light">+254 731 999 376</p>
-						<p class="opacity-80 font-light">+254 737 295 966</p>
-						<div class="pt-4">
-							<h5 class="text-darkBlue">Tanzania</h5>
-							<p class="opacity-80 font-light">+255 657 860 936</p>
-							<p class="pt-4 opacity-80 font-light">
-								enquiry@victoriavisaconsultants.com
-							</p>
-						</div>
-					</div>
+						<input
+							type="number"
+							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
+							placeholder="Phone No."
+							name="phone"
+							id="phone"
+						/>
+						<input
+							type="email"
+							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
+							placeholder="Email Address"
+							name="email"
+							id="email"
+						/>
+						<textarea
+							id="message"
+							name="message"
+							placeholder="Your message..."
+							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[240px] rounded-sm bg-lightGray"
+						></textarea>
+						<button
+							type="button"
+							onclick="sendmail()"
+							class="px-4 py-4 w-full text-white text-center uppercase tracking-normal bg-red-500 baseline hover:bg-darkBlue md:block ease-in duration-300"
+						>
+							Send your Message
+						</button>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -158,7 +203,7 @@
 						<div class="">
 							<a href="/" class="footer-logo"></a>
 						</div>
-						<p class="pt-3 text-white font-light leading-relaxed">
+						<p class="pt-3 text-white font-light text-lg leading-relaxed">
 							We take pride in providing the best services in market to our
 							esteemed clients to make their consultation experience the best
 							one.
@@ -169,7 +214,7 @@
 					<h4 class="text-white text-xl uppercase">Quick Links</h4>
 					<ul class="text-sm py-6">
 						<li
-							class="text-white flex items-center text-base opacity-60 hover:opacity-100 hover:text-white font-light py-2"
+							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light py-2"
 						>
 							<svg
 								class="h-4 pr-3"
@@ -197,7 +242,7 @@
 							<a href="/">Home</a>
 						</li>
 						<li
-							class="text-white flex items-center opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
 						>
 							<svg
 								class="h-4 pr-3"
@@ -225,7 +270,7 @@
 							<a href="./visa.html">Visa</a>
 						</li>
 						<li
-							class="text-white flex items-center opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
 						>
 							<svg
 								class="h-4 pr-3"
@@ -253,7 +298,7 @@
 							<a href="./blog.html">Blog</a>
 						</li>
 						<li
-							class="text-white flex items-center opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
 						>
 							<svg
 								class="h-4 pr-3"
@@ -281,7 +326,7 @@
 							<a href="./about.html">About</a>
 						</li>
 						<li
-							class="text-white flex items-center opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
 						>
 							<svg
 								class="h-4 pr-3"
@@ -314,7 +359,7 @@
 					<h4 class="text-white text-xl uppercase">Visa</h4>
 					<ul class="text-sm py-6">
 						<li
-							class="text-white flex items-center opacity-60 hover:opacity-100 hover:text-white font-light py-2"
+							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light py-2"
 						>
 							<svg
 								class="h-4 pr-3"
@@ -342,7 +387,7 @@
 							<a href="#">Students Visa</a>
 						</li>
 						<li
-							class="text-white flex items-center opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
 						>
 							<svg
 								class="h-4 pr-3"
@@ -370,7 +415,7 @@
 							<a href="#">Business Visa</a>
 						</li>
 						<li
-							class="text-white flex items-center opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
 						>
 							<svg
 								class="h-4 pr-3"
@@ -426,7 +471,7 @@
 							<a href="#">Transit Visa</a>
 						</li>
 						<li
-							class="text-white flex items-center opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
 						>
 							<svg
 								class="h-4 pr-3"
@@ -454,7 +499,7 @@
 							<a href="#">Work Visa</a>
 						</li>
 						<li
-							class="text-white flex items-center opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
 						>
 							<svg
 								class="h-4 pr-3"
@@ -482,7 +527,7 @@
 							<a href="#">Visitor Visa</a>
 						</li>
 						<li
-							class="text-white flex items-center opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
 						>
 							<svg
 								class="h-4 pr-3"
@@ -515,23 +560,23 @@
 					<h4 class="text-white text-xl uppercase">Contact Us</h4>
 					<ul class="text-sm py-6">
 						<h4 class="text-white uppercase text-xl">Kenya</h4>
-						<li class="text-white opacity-60 font-light pb-2">
+						<li class="text-white opacity-60 font-light text-lg pb-2">
 							<a href="#">CornerHouse 6th floor along Kimathi Street</a>
 						</li>
 						<li
-							class="mt-4 flex flex-col text-white opacity-60 font-light pb-2"
+							class="mt-4 flex flex-col text-white text-lg opacity-60 font-light pb-2"
 						>
 							<span class="pb-2">+254 731 999 376</span>
 							<span>+254 737 295 966</span>
 						</li>
 						<h4 class="text-white uppercase text-xl">Tanzania</h4>
-						<li class="text-white opacity-60 font-light pb-2">
+						<li class="text-white opacity-60 font-light text-lg pb-2">
 							<a href="#"
 								>China Plaza 3rd floor Uhuru Muheza Street Dar Es Salaam</a
 							>
 						</li>
 						<li
-							class="mt-4 flex flex-col text-white opacity-60 font-light pb-2"
+							class="mt-4 flex flex-col text-white text-lg opacity-60 font-light pb-2"
 						>
 							<span class="pb-2">+255 657 860 936</span>
 						</li>
@@ -645,12 +690,19 @@
 			</svg>
 			Chat with Us</a
 		>
+
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+		></script>
+
 		<script
 			src="https://code.jquery.com/jquery-3.6.0.min.js"
 			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 			crossorigin="anonymous"
 		></script>
-		<script src="./js/main.js"></script>
-		<script src="js/script.js"></script>
+		<script type="text/javascript" src="./js/main.js"></script>
+		<script type="text/javascript" src="./js/script.js"></script>
+		<script type="text/javascript" src="./js/email.js"></script>
 	</body>
 </html>
