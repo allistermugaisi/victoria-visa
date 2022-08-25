@@ -97,11 +97,6 @@ fetch('https://api-eu-west-2.hygraph.com/v2/cl6gghvg23eb301ta435ja4iz/master', {
 					</div>
             `;
 
-			blogContent.innerHTML = article;
+			return (blogContent.innerHTML += article);
 		});
-		// console.log(articles);
-		// return (blogContent.innerHTML = articles);
-
-		// console.log(articles);
-		// return (blogContent.innerHTML = article);
 	});
