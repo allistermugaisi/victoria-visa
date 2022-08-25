@@ -54,19 +54,20 @@ fetch('https://api-eu-west-2.hygraph.com/v2/cl6gghvg23eb301ta435ja4iz/master', {
 })
 	.then((res) => res.json())
 	.then((result) => {
-		result.data.posts.forEach((post) => {
+		return result.data.posts.forEach((post) => {
 			const {
 				author,
 				title,
 				subTitle,
 				category,
 				photo,
-				content: { markdown },
+				content: { markdown, html },
 				datePublished,
 			} = post;
 			// console.log(post);
+
 			let article = `
-            <div>
+            		<div>
 						<div>
 							<img
 								src=${photo[0]?.url}
@@ -85,18 +86,22 @@ fetch('https://api-eu-west-2.hygraph.com/v2/cl6gghvg23eb301ta435ja4iz/master', {
 								<h4 class="py-3 text-xl font-semibold">
 									${subTitle}
 								</h4>
-								<p class="opacity-80 font-light text-lg">
-									${markdown}
-								</p>
+								${html}
 								<p class="pt-4">
 									<span class="opacity-60">By</span>
 									<span>${author?.name}</span>
-									<span class="opacity-60"> - ${datePublished} </span>
+									<span class="opacity-60"> - ${new Date(datePublished).toString()} </span>
 								</p>
 							</div>
 						</div>
 					</div>
             `;
-			return (blogContent.innerHTML = article);
+
+			blogContent.innerHTML = article;
 		});
+		// console.log(articles);
+		// return (blogContent.innerHTML = articles);
+
+		// console.log(articles);
+		// return (blogContent.innerHTML = article);
 	});
