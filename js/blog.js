@@ -64,7 +64,7 @@ fetch('https://api-eu-west-2.hygraph.com/v2/cl6gghvg23eb301ta435ja4iz/master', {
 				content: { markdown, html },
 				datePublished,
 			} = post;
-			// console.log(post);
+			// console.log(html);
 
 			let article = `
             		<div>
