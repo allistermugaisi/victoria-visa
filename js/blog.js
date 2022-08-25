@@ -87,7 +87,7 @@ fetch('https://api-eu-west-2.hygraph.com/v2/cl6gghvg23eb301ta435ja4iz/master', {
 									${subTitle}
 								</h4>
 								${html}
-								<p class="pt-4">
+								<p>
 									<span class="opacity-60">By</span>
 									<span>${author?.name}</span>
 									<span class="opacity-60"> - ${new Date(datePublished).toString()} </span>
