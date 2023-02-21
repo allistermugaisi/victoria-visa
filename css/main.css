@@ -720,6 +720,10 @@ video {
   height: 240px;
 }
 
+.h-\[100px\] {
+  height: 100px;
+}
+
 .min-h-\[652px\] {
   min-height: 652px;
 }
