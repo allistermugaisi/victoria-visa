@@ -1,925 +1,943 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/main.css" />
-		<link rel="stylesheet" href="css/styles.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
-		<!--========== BOX ICONS ==========-->
-		<link
-			href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
-			rel="stylesheet"
-		/>
-		<!-- ============== Font awesome ============= -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-		/>
+    <!--========== BOX ICONS ==========-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- ============== Font awesome ============= -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 
-		<title>Victoria Visa Consultants</title>
-	</head>
+    <title>Victoria Visa Consultants</title>
+  </head>
 
-	<body>
-		<!-- Navbar -->
-		<nav class="relative xl:container mx-auto px-4 xl:px-10">
-			<!-- Flex container -->
-			<div class="flex items-center justify-around md:justify-between">
-				<!-- Logo -->
-				<div class="">
-					<a href="/" class="logo"></a>
-				</div>
-				<!-- Menu Items -->
-				<div class="hidden space-x-6 md:flex">
-					<a href="/" class="text-darkBlue hover:text-red-500 font-semibold"
-						>Home</a
-					>
-					<a
-						href="/visa.html"
-						class="text-darkBlue hover:text-red-500 font-semibold"
-						>Visa</a
-					>
-					<a
-						href="/about.html"
-						class="text-darkBlue hover:text-red-500 font-semibold"
-						>About</a
-					>
-					<a
-						href="/blog.html"
-						class="text-darkBlue hover:text-red-500 font-semibold"
-						>Blog</a
-					>
-					<a
-						href="/contact.html"
-						class="text-darkBlue hover:text-red-500 font-semibold"
-						>Contact</a
-					>
-				</div>
-				<!-- Button -->
-				<a
-					href="/contact.html"
-					class="hidden px-4 py-8 text-white uppercase tracking-normal bg-red-500 baseline hover:bg-darkBlue md:block ease-in duration-300"
-					>Get Consultation</a
-				>
+  <body>
+    <!-- Navbar -->
+    <nav class="relative xl:container mx-auto px-4 xl:px-10">
+      <!-- Flex container -->
+      <div class="flex items-center justify-around md:justify-between">
+        <!-- Logo -->
+        <div class="">
+          <a href="/" class="logo"></a>
+        </div>
+        <!-- Menu Items -->
+        <div class="hidden space-x-6 md:flex">
+          <a href="/" class="text-darkBlue hover:text-red-500 font-semibold"
+            >Home</a
+          >
+          <a
+            href="/visa.html"
+            class="text-darkBlue hover:text-red-500 font-semibold"
+            >Visa</a
+          >
+          <a
+            href="/about.html"
+            class="text-darkBlue hover:text-red-500 font-semibold"
+            >About</a
+          >
+          <a
+            href="/blog.html"
+            class="text-darkBlue hover:text-red-500 font-semibold"
+            >Blog</a
+          >
+          <a
+            href="/contact.html"
+            class="text-darkBlue hover:text-red-500 font-semibold"
+            >Contact</a
+          >
+        </div>
+        <!-- Button -->
+        <a
+          href="/contact.html"
+          class="hidden px-4 py-8 text-white uppercase tracking-normal bg-red-500 baseline hover:bg-darkBlue md:block ease-in duration-300"
+          >Get Consultation</a
+        >
 
-				<!-- Hamburger Icon -->
-				<button
-					id="menu-btn"
-					class="block hamburger md:hidden focus:outline-none"
-				>
-					<span class="hamburger-top"></span>
-					<span class="hamburger-middle"></span>
-					<span class="hamburger-bottom"></span>
-				</button>
-			</div>
+        <!-- Hamburger Icon -->
+        <button
+          id="menu-btn"
+          class="block hamburger md:hidden focus:outline-none"
+        >
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
 
-			<!-- Mobile Menu -->
-			<div class="md:hidden">
-				<div
-					id="menu"
-					class="z-[200] absolute rounded flex-col items-center hidden self-end text-white py-8 mt-4 space-y-6 font-bold bg-red-500 sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
-				>
-					<a href="/">Home</a>
-					<a href="/visa.html">Visa</a>
-					<a href="/about.html">About</a>
-					<a href="/blog.html">Blog</a>
-					<a href="/contact.html">Contact</a>
-				</div>
-			</div>
-		</nav>
+      <!-- Mobile Menu -->
+      <div class="md:hidden">
+        <div
+          id="menu"
+          class="z-[200] absolute rounded flex-col items-center hidden self-end text-white py-8 mt-4 space-y-6 font-bold bg-red-500 sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+        >
+          <a href="/">Home</a>
+          <a href="/visa.html">Visa</a>
+          <a href="/about.html">About</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
 
-		<section class="carousel" aria-label="Gallery">
-			<ol class="carousel__viewport">
-				<li id="carousel__slide1" tabindex="0" class="carousel__slide">
-					<div class="carousel__snapper">
-						<a href="#carousel__slide4" class="carousel__prev"
-							>Go to last slide</a
-						>
-						<a href="#carousel__slide2" class="carousel__next"
-							>Go to next slide</a
-						>
-					</div>
-				</li>
-				<li id="carousel__slide2" tabindex="0" class="carousel__slide">
-					<div class="carousel__snapper"></div>
-					<a href="#carousel__slide1" class="carousel__prev"
-						>Go to previous slide</a
-					>
-					<a href="#carousel__slide3" class="carousel__next"
-						>Go to next slide</a
-					>
-				</li>
-				<li id="carousel__slide3" tabindex="0" class="carousel__slide">
-					<div class="carousel__snapper"></div>
-					<a href="#carousel__slide2" class="carousel__prev"
-						>Go to previous slide</a
-					>
-					<a href="#carousel__slide4" class="carousel__next"
-						>Go to next slide</a
-					>
-				</li>
-				<li id="carousel__slide4" tabindex="0" class="carousel__slide">
-					<div class="carousel__snapper"></div>
-					<a href="#carousel__slide3" class="carousel__prev"
-						>Go to previous slide</a
-					>
-					<a href="#carousel__slide1" class="carousel__next"
-						>Go to first slide</a
-					>
-				</li>
-			</ol>
-			<aside class="carousel__navigation">
-				<ol class="carousel__navigation-list">
-					<li class="carousel__navigation-item">
-						<a href="#carousel__slide1" class="carousel__navigation-button"
-							>Go to slide 1</a
-						>
-					</li>
-					<li class="carousel__navigation-item">
-						<a href="#carousel__slide2" class="carousel__navigation-button"
-							>Go to slide 2</a
-						>
-					</li>
-					<li class="carousel__navigation-item">
-						<a href="#carousel__slide3" class="carousel__navigation-button"
-							>Go to slide 3</a
-						>
-					</li>
-					<li class="carousel__navigation-item">
-						<a href="#carousel__slide4" class="carousel__navigation-button"
-							>Go to slide 4</a
-						>
-					</li>
-				</ol>
-			</aside>
-		</section>
+    <section class="carousel" aria-label="Gallery">
+      <ol class="carousel__viewport">
+        <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+          <div class="carousel__snapper">
+            <a href="#carousel__slide4" class="carousel__prev"
+              >Go to last slide</a
+            >
+            <a href="#carousel__slide2" class="carousel__next"
+              >Go to next slide</a
+            >
+          </div>
+        </li>
+        <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+          <div class="carousel__snapper"></div>
+          <a href="#carousel__slide1" class="carousel__prev"
+            >Go to previous slide</a
+          >
+          <a href="#carousel__slide3" class="carousel__next"
+            >Go to next slide</a
+          >
+        </li>
+        <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+          <div class="carousel__snapper"></div>
+          <a href="#carousel__slide2" class="carousel__prev"
+            >Go to previous slide</a
+          >
+          <a href="#carousel__slide4" class="carousel__next"
+            >Go to next slide</a
+          >
+        </li>
+        <li id="carousel__slide4" tabindex="0" class="carousel__slide">
+          <div class="carousel__snapper"></div>
+          <a href="#carousel__slide3" class="carousel__prev"
+            >Go to previous slide</a
+          >
+          <a href="#carousel__slide1" class="carousel__next"
+            >Go to first slide</a
+          >
+        </li>
+      </ol>
+      <aside class="carousel__navigation">
+        <ol class="carousel__navigation-list">
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide1" class="carousel__navigation-button"
+              >Go to slide 1</a
+            >
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide2" class="carousel__navigation-button"
+              >Go to slide 2</a
+            >
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide3" class="carousel__navigation-button"
+              >Go to slide 3</a
+            >
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide4" class="carousel__navigation-button"
+              >Go to slide 4</a
+            >
+          </li>
+        </ol>
+      </aside>
+    </section>
 
-		<section class="py-14">
-			<div>
-				<p class="text-center text-red-500 uppercase font-semibold text-lg">
-					What We Offer
-				</p>
-				<h2
-					class="text-center text-2xl md:text-6xl tracking-wide font-semibold text-darkBlue"
-				>
-					Victoria Visa Services
-				</h2>
-				<p
-					class="px-3 sm:px-0 text-center py-2 md:w-1/3 mx-auto opacity-80 font-light text-lg"
-				>
-					We take pride in providing the best services in market to our esteemed
-					clients.
-				</p>
-				<div class="border-2 border-red-500 w-10 mx-auto my-2 mb-12"></div>
-			</div>
-			<div class="px-3 sm:px-0 grid md:grid-cols-3 gap-4 xl:container mx-auto xl:px-10">
-				<div class="visa-card relative">
-					<div class="bg-red-500 absolute p-3 bottom-6 left-6">
-						<h4 class="text-white text-xl w-1/3">Working Visas</h4>
-					</div>
-					<div
-						class="bg-red-500 absolute p-3 bottom-0 left-0 hover:opacity-100 opacity-0 ease-in duration-300"
-					>
-						<h4 class="text-white text-xl w-1/3">Working Visas</h4>
-						<p class="text-white text-sm">
-							This program is for those seeking employment permit in foreign
-							countries. Victoria Visa Consultants assists you to
-						</p>
-					</div>
-				</div>
-				<div class="visa-card relative">
-					<div class="bg-red-500 absolute p-3 bottom-6 left-6">
-						<h4 class="text-white text-xl w-1/3">Student Visas</h4>
-					</div>
-					<div
-						class="bg-red-500 absolute p-3 bottom-0 left-0 hover:opacity-100 opacity-0 ease-in duration-300"
-					>
-						<h4 class="text-white text-xl w-1/3">Student Visas</h4>
-						<p class="text-white text-sm">
-							Are you desiring to further your studies abroad? Victoria Visa
-							Consultants has specifically tailored the Student Visa to
-						</p>
-					</div>
-				</div>
-				<div class="visa-card relative">
-					<div class="bg-red-500 absolute p-3 bottom-6 left-6">
-						<h4 class="text-white text-xl w-1/3">Medical Visas</h4>
-					</div>
-					<div
-						class="bg-red-500 absolute p-3 bottom-0 left-0 hover:opacity-100 opacity-0 ease-in duration-300"
-					>
-						<h4 class="text-white text-xl w-1/3">Medical Visas</h4>
-						<p class="text-white text-sm">
-							Having a patient that require specialized treatment in a foreign
-							country can be disturbing, especially in the absence of
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section class="py-14">
+      <div>
+        <p class="text-center text-red-500 uppercase font-semibold text-lg">
+          What We Offer
+        </p>
+        <h2
+          class="text-center text-2xl md:text-6xl tracking-wide font-semibold text-darkBlue"
+        >
+          Victoria Visa Services
+        </h2>
+        <p
+          class="px-3 sm:px-0 text-center py-2 md:w-1/3 mx-auto opacity-80 font-light text-lg"
+        >
+          We take pride in providing the best services in market to our esteemed
+          clients.
+        </p>
+        <div class="border-2 border-red-500 w-10 mx-auto my-2 mb-12"></div>
+      </div>
+      <div
+        class="px-3 sm:px-0 grid md:grid-cols-3 gap-4 xl:container mx-auto xl:px-10"
+      >
+        <div class="visa-card relative">
+          <div class="bg-red-500 absolute p-3 bottom-6 left-6">
+            <h4 class="text-white text-xl w-1/3">Working Visas</h4>
+          </div>
+          <div
+            class="bg-red-500 absolute p-3 bottom-0 left-0 hover:opacity-100 opacity-0 ease-in duration-300"
+          >
+            <h4 class="text-white text-xl w-1/3">Working Visas</h4>
+            <p class="text-white text-sm">
+              This program is for those seeking employment permit in foreign
+              countries. Victoria Visa Consultants assists you to
+            </p>
+          </div>
+        </div>
+        <div class="visa-card relative">
+          <div class="bg-red-500 absolute p-3 bottom-6 left-6">
+            <h4 class="text-white text-xl w-1/3">Student Visas</h4>
+          </div>
+          <div
+            class="bg-red-500 absolute p-3 bottom-0 left-0 hover:opacity-100 opacity-0 ease-in duration-300"
+          >
+            <h4 class="text-white text-xl w-1/3">Student Visas</h4>
+            <p class="text-white text-sm">
+              Are you desiring to further your studies abroad? Victoria Visa
+              Consultants has specifically tailored the Student Visa to
+            </p>
+          </div>
+        </div>
+        <div class="visa-card relative">
+          <div class="bg-red-500 absolute p-3 bottom-6 left-6">
+            <h4 class="text-white text-xl w-1/3">Medical Visas</h4>
+          </div>
+          <div
+            class="bg-red-500 absolute p-3 bottom-0 left-0 hover:opacity-100 opacity-0 ease-in duration-300"
+          >
+            <h4 class="text-white text-xl w-1/3">Medical Visas</h4>
+            <p class="text-white text-sm">
+              Having a patient that require specialized treatment in a foreign
+              country can be disturbing, especially in the absence of
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<section>
-			<div class="px-3 sm:px-0 grid md:grid-cols-2 gap-8 xl:container mx-auto xl:px-10">
-				<div class="grid grid-cols-2 gap-2">
-					<div class="about-card"></div>
-					<div class="about-card"></div>
-					<div class="about-card"></div>
-					<div class="about-card"></div>
-				</div>
-				<div class="flex flex-col justify-center items-start">
-					<div>
-						<h4 class="text-red-500 uppercase font-semibold text-lg">
-							About Victoria Visa
-						</h4>
-						<h2
-							class="text-2xl md:text-6xl tracking-wide text-darkBlue font-semibold"
-						>
-							We're Trusted Consultant
-						</h2>
-					</div>
-					<div class="border-2 border-red-500 w-10 my-6"></div>
-					<div class="mt-4">
-						<p class="opacity-80 font-light text-lg">
-							Visa application and migration can be a tedious exercise. At
-							Victoria Visa Consultants, we understand this and offer a cost
-							effective, easy visa, and immigration service to suit your needs.
-							With over a decade of expertise, we pride ourselves in
-							enlightening and guiding.
-						</p>
-						<button
-							class="uppercase mt-6 text-white bg-red-500 p-3 px-6 hover:text-red-500 hover:bg-white hover:shadow-md ease-in duration-300"
-						>
-							<a href="/about.html"> Learn More </a>
-						</button>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section>
+      <div
+        class="px-3 sm:px-0 grid md:grid-cols-2 gap-8 xl:container mx-auto xl:px-10"
+      >
+        <div class="grid grid-cols-2 gap-2">
+          <div class="about-card"></div>
+          <div class="about-card"></div>
+          <div class="about-card"></div>
+          <div class="about-card"></div>
+        </div>
+        <div class="flex flex-col justify-center items-start">
+          <div>
+            <h4 class="text-red-500 uppercase font-semibold text-lg">
+              About Victoria Visa
+            </h4>
+            <h2
+              class="text-2xl md:text-6xl tracking-wide text-darkBlue font-semibold"
+            >
+              We're Trusted Consultant
+            </h2>
+          </div>
+          <div class="border-2 border-red-500 w-10 my-6"></div>
+          <div class="mt-4">
+            <p class="opacity-80 font-light text-lg">
+              Visa application and migration can be a tedious exercise. At
+              Victoria Visa Consultants, we understand this and offer a cost
+              effective, easy visa, and immigration service to suit your needs.
+              With over a decade of expertise, we pride ourselves in
+              enlightening and guiding.
+            </p>
+            <button
+              class="uppercase mt-6 text-white bg-red-500 p-3 px-6 hover:text-red-500 hover:bg-white hover:shadow-md ease-in duration-300"
+            >
+              <a href="/about.html"> Learn More </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<section class="py-14 xl:container mx-auto px-4 xl:px-10">
-			<div>
-				<p class="text-center text-red-500 uppercase font-semibold text-lg">
-					Countries We Offer
-				</p>
-				<h2
-					class="text-center capitalize text-2xl md:text-6xl tracking-wide font-semibold text-darkBlue"
-				>
-					Get your travel visa
-				</h2>
-				<p
-					class="px-3 sm:px-0 text-center py-2 md:w-1/3 mx-auto opacity-80 font-light text-lg"
-				>
-					We provide complete Visa assistance with an experienced teams across
-					the world.
-				</p>
-				<div class="border-2 border-red-500 w-10 mx-auto my-2 mb-12"></div>
-			</div>
-			<div class="grid px-3 sm:px-0 md:grid-cols-3 gap-2">
-				<div class="countries-card relative overflow-hidden">
-					<img
-						class="country-canada hover:scale-105 ease-in duration-300"
-						src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078286/Victoriavisaconsultants/113_dgbbfe.png"
-						alt="canada"
-					/>
-				</div>
-				<div class="countries-card relative overflow-hidden">
-					<img
-						class="country-australia hover:scale-105 ease-in duration-300"
-						src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078285/Victoriavisaconsultants/114_lxru2h.png"
-						alt="australia"
-					/>
-				</div>
-				<div class="countries-card relative overflow-hidden">
-					<img
-						class="country-usa hover:scale-105 ease-in duration-300"
-						src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078289/Victoriavisaconsultants/116_nnrmdp.png"
-						alt="usa"
-					/>
-				</div>
-			</div>
-		</section>
+    <section class="py-14 xl:container mx-auto px-4 xl:px-10">
+      <div>
+        <p class="text-center text-red-500 uppercase font-semibold text-lg">
+          Countries We Offer
+        </p>
+        <h2
+          class="text-center capitalize text-2xl md:text-6xl tracking-wide font-semibold text-darkBlue"
+        >
+          Get your travel visa
+        </h2>
+        <p
+          class="px-3 sm:px-0 text-center py-2 md:w-1/3 mx-auto opacity-80 font-light text-lg"
+        >
+          We provide complete Visa assistance with an experienced teams across
+          the world.
+        </p>
+        <div class="border-2 border-red-500 w-10 mx-auto my-2 mb-12"></div>
+      </div>
+      <div class="grid px-3 sm:px-0 md:grid-cols-3 gap-2">
+        <div class="countries-card relative overflow-hidden">
+          <img
+            class="country-canada hover:scale-105 ease-in duration-300"
+            src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078286/Victoriavisaconsultants/113_dgbbfe.png"
+            alt="canada"
+          />
+        </div>
+        <div class="countries-card relative overflow-hidden">
+          <img
+            class="country-australia hover:scale-105 ease-in duration-300"
+            src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078285/Victoriavisaconsultants/114_lxru2h.png"
+            alt="australia"
+          />
+        </div>
+        <div class="countries-card relative overflow-hidden">
+          <img
+            class="country-usa hover:scale-105 ease-in duration-300"
+            src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078289/Victoriavisaconsultants/116_nnrmdp.png"
+            alt="usa"
+          />
+        </div>
+      </div>
+    </section>
 
-		<section class="py-14 container mx-auto bg-red-500 min-h-[350px]">
-			<div class="grid md:grid-cols-3 gap-8 sm:gap-0">
-				<div class="px-14 md:col-span-2">
-					<h3 class="text-white uppercase text-lg">Why Choose Victoria Visa</h3>
-					<h1
-						class="text-white text-2xl md:text-6xl capitalize pt-2 tracking-wide"
-					>
-						A solution for all your visa needs
-					</h1>
-					<div class="border-2 border-white w-10 my-4 mb-12"></div>
-					<button
-						class="uppercase mt-6 text-white outline p-3 px-6 hover:text-red-500 hover:bg-white hover:shadow-md ease-in duration-300"
-					>
-						<a href="/about.html"> Learn More </a>
-					</button>
-				</div>
-				<div>
-					<ul class="text-white text-xl font-light leading-loose mx-7 md:mr-14">
-						<li class="border-b border-white">Trust</li>
-						<li class="border-b border-white">Support</li>
-						<li class="border-b border-white">Evaluation</li>
-						<li class="border-b border-white">Affordable</li>
-						<li class="border-b border-white">Credibility</li>
-						<li class="border-b border-white">Admissions</li>
-						<li class="border-b border-white">Application</li>
-						<li class="border-b border-white">Quality Services</li>
-					</ul>
-				</div>
-			</div>
-		</section>
+    <section class="py-14 container mx-auto bg-red-500 min-h-[350px]">
+      <div class="grid md:grid-cols-3 gap-8 sm:gap-0">
+        <div class="px-14 md:col-span-2">
+          <h3 class="text-white uppercase text-lg">Why Choose Victoria Visa</h3>
+          <h1
+            class="text-white text-2xl md:text-6xl capitalize pt-2 tracking-wide"
+          >
+            A solution for all your visa needs
+          </h1>
+          <div class="border-2 border-white w-10 my-4 mb-12"></div>
+          <button
+            class="uppercase mt-6 text-white outline p-3 px-6 hover:text-red-500 hover:bg-white hover:shadow-md ease-in duration-300"
+          >
+            <a href="/about.html"> Learn More </a>
+          </button>
+        </div>
+        <div>
+          <ul class="text-white text-xl font-light leading-loose mx-7 md:mr-14">
+            <li class="border-b border-white">Trust</li>
+            <li class="border-b border-white">Support</li>
+            <li class="border-b border-white">Evaluation</li>
+            <li class="border-b border-white">Affordable</li>
+            <li class="border-b border-white">Credibility</li>
+            <li class="border-b border-white">Admissions</li>
+            <li class="border-b border-white">Application</li>
+            <li class="border-b border-white">Quality Services</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-		<section class="py-14 xl:container mx-auto px-4 xl:px-10">
-			<div>
-				<p class="text-center text-red-500 uppercase font-semibold text-lg">
-					Client Reviews
-				</p>
-				<h2
-					class="text-center capitalize text-2xl md:text-6xl tracking-wide font-semibold text-darkBlue"
-				>
-					Feedback from our clients
-				</h2>
-				<p
-					class="px-3 sm:px-0 text-center py-2 mx-auto opacity-80 font-light text-lg"
-				>
-					We always take care of our clients and they are very happy. We have
-					collected a few stories for you.
-				</p>
-				<div class="border-2 border-red-500 w-10 mx-auto my-2 mb-12"></div>
-			</div>
-			<div class="grid md:grid-cols-3 gap-2 min-h-[100px]">
-				<div>
-					<div class="bg-darkBlue px-4 py-8">
-						<h4 class="text-white text-base font-light">
-							Victoria Visa Consultants is a wonderful company to work with.
-							They were very responsible and reliable. They assured us
-							everything would work out and worked with us until we received our
-							visa. I am very thankful once again.
-						</h4>
-					</div>
-					<div class="grid grid-cols-3 pt-4">
-						<div class="px-2">
-							<img
-								src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078296/Victoriavisaconsultants/108_kxvj0n.jpg"
-								alt="client-1"
-							/>
-						</div>
-						<div class="col-span-2">
-							<h4 class="text-darkBlue text-xl">Jane & Kate</h4>
-							<p class="font-thin">Tourists</p>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div class="bg-darkBlue px-4 py-8">
-						<h4 class="text-white text-base font-light">
-							I applied for a student visa to canada and I was denied but when I
-							decided to try Victoria Visa, they took their time and made sure,
-							my application was approved. I will make sure to spread the word
-							to my friends.
-						</h4>
-					</div>
-					<div class="grid grid-cols-3 pt-4">
-						<div class="px-2">
-							<img
-								src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078243/Victoriavisaconsultants/101_swl05u.jpg"
-								alt="client-2"
-							/>
-						</div>
-						<div class="col-span-2">
-							<h4 class="text-darkBlue text-xl">Alan</h4>
-							<p class="font-thin">Student</p>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div class="bg-darkBlue px-4 py-8">
-						<h4 class="text-white text-base font-light">
-							Thanks to Victoria Visa for their diligent work. I needed a
-							Schengen Visa to visit Germany for an engagement with my fiance
-							and they guided me and confirmed all the document before
-							submission, finally my visa was approved. Thanks again.
-						</h4>
-					</div>
-					<div class="grid grid-cols-3 pt-4">
-						<div class="px-2">
-							<img
-								src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1661458391/Victoriavisaconsultants/08SMMK_changing-traveller-report_resource-centre-tile_es_tvdoyb.jpg"
-								alt="client-3"
-							/>
-						</div>
-						<div class="col-span-2">
-							<h4 class="text-darkBlue text-xl">Vee</h4>
-							<p class="font-thin">Traveller</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section class="py-14 xl:container mx-auto px-4 xl:px-10">
+      <div>
+        <p class="text-center text-red-500 uppercase font-semibold text-lg">
+          Client Reviews
+        </p>
+        <h2
+          class="text-center capitalize text-2xl md:text-6xl tracking-wide font-semibold text-darkBlue"
+        >
+          Feedback from our clients
+        </h2>
+        <p
+          class="px-3 sm:px-0 text-center py-2 mx-auto opacity-80 font-light text-lg"
+        >
+          We always take care of our clients and they are very happy. We have
+          collected a few stories for you.
+        </p>
+        <div class="border-2 border-red-500 w-10 mx-auto my-2 mb-12"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-2 min-h-[100px]">
+        <div>
+          <div class="bg-darkBlue px-4 py-8">
+            <h4 class="text-white text-base font-light">
+              Victoria Visa Consultants is a wonderful company to work with.
+              They were very responsible and reliable. They assured us
+              everything would work out and worked with us until we received our
+              visa. I am very thankful once again.
+            </h4>
+          </div>
+          <div class="grid grid-cols-3 pt-4">
+            <div class="px-2">
+              <img
+                src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078296/Victoriavisaconsultants/108_kxvj0n.jpg"
+                alt="client-1"
+              />
+            </div>
+            <div class="col-span-2">
+              <h4 class="text-darkBlue text-xl">Jane & Kate</h4>
+              <p class="font-thin">Tourists</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="bg-darkBlue px-4 py-8">
+            <h4 class="text-white text-base font-light">
+              I applied for a student visa to canada and I was denied but when I
+              decided to try Victoria Visa, they took their time and made sure,
+              my application was approved. I will make sure to spread the word
+              to my friends.
+            </h4>
+          </div>
+          <div class="grid grid-cols-3 pt-4">
+            <div class="px-2">
+              <img
+                src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078243/Victoriavisaconsultants/101_swl05u.jpg"
+                alt="client-2"
+              />
+            </div>
+            <div class="col-span-2">
+              <h4 class="text-darkBlue text-xl">Alan</h4>
+              <p class="font-thin">Student</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="bg-darkBlue px-4 py-8">
+            <h4 class="text-white text-base font-light">
+              Thanks to Victoria Visa for their diligent work. I needed a
+              Schengen Visa to visit Germany for an engagement with my fiance
+              and they guided me and confirmed all the document before
+              submission, finally my visa was approved. Thanks again.
+            </h4>
+          </div>
+          <div class="grid grid-cols-3 pt-4">
+            <div class="px-2">
+              <img
+                src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1661458391/Victoriavisaconsultants/08SMMK_changing-traveller-report_resource-centre-tile_es_tvdoyb.jpg"
+                alt="client-3"
+              />
+            </div>
+            <div class="col-span-2">
+              <h4 class="text-darkBlue text-xl">Vee</h4>
+              <p class="font-thin">Traveller</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<!-- Footer -->
-		<footer class="bg-darkBlue py-14">
-			<div class="container mx-auto grid md:grid-cols-5 gap-4 px-7">
-				<div class="mb-4 md:mb-0 md:col-span-2">
-					<div class="text-white text-sm">
-						<div class="">
-							<a href="/" class="footer-logo"></a>
-						</div>
-						<p class="pt-3 text-white font-light text-lg leading-relaxed">
-							We take pride in providing the best services in market to our
-							esteemed clients to make their consultation experience the best
-							one.
-						</p>
-					</div>
-				</div>
-				<div class="">
-					<h4 class="text-white text-xl uppercase">Quick Links</h4>
-					<ul class="text-sm py-6">
-						<li
-							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light py-2"
-						>
-							<svg
-								class="h-4 pr-3"
-								id="Layer_1"
-								data-name="Layer 1"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 290.98 213.83"
-							>
-								<defs>
-									<style>
-										.cls-1 {
-											fill: #fff;
-										}
-									</style>
-								</defs>
-								<polygon
-									class="cls-1"
-									points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
-								/>
-								<polygon
-									class="cls-1"
-									points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
-								/>
-							</svg>
-							<a href="/">Home</a>
-						</li>
-						<li
-							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
-						>
-							<svg
-								class="h-4 pr-3"
-								id="Layer_1"
-								data-name="Layer 1"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 290.98 213.83"
-							>
-								<defs>
-									<style>
-										.cls-1 {
-											fill: #fff;
-										}
-									</style>
-								</defs>
-								<polygon
-									class="cls-1"
-									points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
-								/>
-								<polygon
-									class="cls-1"
-									points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
-								/>
-							</svg>
-							<a href="./visa.html">Visa</a>
-						</li>
-						<li
-							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
-						>
-							<svg
-								class="h-4 pr-3"
-								id="Layer_1"
-								data-name="Layer 1"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 290.98 213.83"
-							>
-								<defs>
-									<style>
-										.cls-1 {
-											fill: #fff;
-										}
-									</style>
-								</defs>
-								<polygon
-									class="cls-1"
-									points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
-								/>
-								<polygon
-									class="cls-1"
-									points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
-								/>
-							</svg>
-							<a href="./blog.html">Blog</a>
-						</li>
-						<li
-							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
-						>
-							<svg
-								class="h-4 pr-3"
-								id="Layer_1"
-								data-name="Layer 1"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 290.98 213.83"
-							>
-								<defs>
-									<style>
-										.cls-1 {
-											fill: #fff;
-										}
-									</style>
-								</defs>
-								<polygon
-									class="cls-1"
-									points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
-								/>
-								<polygon
-									class="cls-1"
-									points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
-								/>
-							</svg>
-							<a href="./about.html">About</a>
-						</li>
-						<li
-							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
-						>
-							<svg
-								class="h-4 pr-3"
-								id="Layer_1"
-								data-name="Layer 1"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 290.98 213.83"
-							>
-								<defs>
-									<style>
-										.cls-1 {
-											fill: #fff;
-										}
-									</style>
-								</defs>
-								<polygon
-									class="cls-1"
-									points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
-								/>
-								<polygon
-									class="cls-1"
-									points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
-								/>
-							</svg>
-							<a href="./contact.html">Contact</a>
-						</li>
-					</ul>
-				</div>
-				<div class="">
-					<h4 class="text-white text-xl uppercase">Visa</h4>
-					<ul class="text-sm py-6">
-						<li
-							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light py-2"
-						>
-							<svg
-								class="h-4 pr-3"
-								id="Layer_1"
-								data-name="Layer 1"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 290.98 213.83"
-							>
-								<defs>
-									<style>
-										.cls-1 {
-											fill: #fff;
-										}
-									</style>
-								</defs>
-								<polygon
-									class="cls-1"
-									points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
-								/>
-								<polygon
-									class="cls-1"
-									points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
-								/>
-							</svg>
-							<a href="#">Students Visa</a>
-						</li>
-						<li
-							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
-						>
-							<svg
-								class="h-4 pr-3"
-								id="Layer_1"
-								data-name="Layer 1"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 290.98 213.83"
-							>
-								<defs>
-									<style>
-										.cls-1 {
-											fill: #fff;
-										}
-									</style>
-								</defs>
-								<polygon
-									class="cls-1"
-									points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
-								/>
-								<polygon
-									class="cls-1"
-									points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
-								/>
-							</svg>
-							<a href="#">Business Visa</a>
-						</li>
-						<li
-							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
-						>
-							<svg
-								class="h-4 pr-3"
-								id="Layer_1"
-								data-name="Layer 1"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 290.98 213.83"
-							>
-								<defs>
-									<style>
-										.cls-1 {
-											fill: #fff;
-										}
-									</style>
-								</defs>
-								<polygon
-									class="cls-1"
-									points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
-								/>
-								<polygon
-									class="cls-1"
-									points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
-								/>
-							</svg>
-							<a href="#">Family Visa</a>
-						</li>
-						<li
-							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
-						>
-							<svg
-								class="h-4 pr-3"
-								id="Layer_1"
-								data-name="Layer 1"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 290.98 213.83"
-							>
-								<defs>
-									<style>
-										.cls-1 {
-											fill: #fff;
-										}
-									</style>
-								</defs>
-								<polygon
-									class="cls-1"
-									points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
-								/>
-								<polygon
-									class="cls-1"
-									points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
-								/>
-							</svg>
-							<a href="#">Transit Visa</a>
-						</li>
-						<li
-							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
-						>
-							<svg
-								class="h-4 pr-3"
-								id="Layer_1"
-								data-name="Layer 1"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 290.98 213.83"
-							>
-								<defs>
-									<style>
-										.cls-1 {
-											fill: #fff;
-										}
-									</style>
-								</defs>
-								<polygon
-									class="cls-1"
-									points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
-								/>
-								<polygon
-									class="cls-1"
-									points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
-								/>
-							</svg>
-							<a href="#">Work Visa</a>
-						</li>
-						<li
-							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
-						>
-							<svg
-								class="h-4 pr-3"
-								id="Layer_1"
-								data-name="Layer 1"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 290.98 213.83"
-							>
-								<defs>
-									<style>
-										.cls-1 {
-											fill: #fff;
-										}
-									</style>
-								</defs>
-								<polygon
-									class="cls-1"
-									points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
-								/>
-								<polygon
-									class="cls-1"
-									points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
-								/>
-							</svg>
-							<a href="#">Visitor Visa</a>
-						</li>
-						<li
-							class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
-						>
-							<svg
-								class="h-4 pr-3"
-								id="Layer_1"
-								data-name="Layer 1"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 290.98 213.83"
-							>
-								<defs>
-									<style>
-										.cls-1 {
-											fill: #fff;
-										}
-									</style>
-								</defs>
-								<polygon
-									class="cls-1"
-									points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
-								/>
-								<polygon
-									class="cls-1"
-									points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
-								/>
-							</svg>
-							<a href="#">Medical Visa</a>
-						</li>
-					</ul>
-				</div>
-				<div class="">
-					<h4 class="text-white text-xl uppercase">Contact Us</h4>
-					<ul class="text-sm py-6">
-						<h4 class="text-white uppercase text-xl">Kenya</h4>
-						<li class="text-white opacity-60 font-light text-lg pb-2">
-							<a href="#"
-								>CornerHouse 6th floor Suite A8 along Kimathi Street,
-								Nairobi.</a
-							>
-						</li>
-						<li
-							class="mt-4 flex flex-col text-white text-lg opacity-60 font-light pb-2"
-						>
-							<!-- <span class="pb-2">+254 731 999 376</span> -->
-							<span>+254 790 004 155</span>
-						</li>
-						<h4 class="text-white uppercase text-xl">Germany</h4>
-						<li class="text-white opacity-60 font-light text-lg pb-2">
-							<a href="#">Trier Germany</a>
-						</li>
-						<li
-							class="mt-4 flex flex-col text-white text-lg opacity-60 font-light pb-2"
-						>
-							<span class="pb-2">+49 1521 5481073</span>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div
-				class="container mx-auto bg-darkBlue px-3 py-8 flex items-center justify-center border-t-2 border-white"
-			>
-				<p class="text-sm text-white font-light">
-					Copyright &copy;
-					<script>
-						document.write(new Date().getFullYear());
-					</script>
-					<span class="text-red">Victora Visa Consultants</span>. All Rights
-					Reserved.
-				</p>
-			</div>
-		</footer>
+    <!-- Footer -->
+    <footer class="bg-darkBlue py-14">
+      <div class="container mx-auto grid md:grid-cols-5 gap-4 px-7">
+        <div class="mb-4 md:mb-0 md:col-span-2">
+          <div class="text-white text-sm">
+            <div class="">
+              <a href="/" class="footer-logo"></a>
+            </div>
+            <p class="pt-3 text-white font-light text-lg leading-relaxed">
+              We take pride in providing the best services in market to our
+              esteemed clients to make their consultation experience the best
+              one.
+            </p>
+          </div>
+        </div>
+        <div class="">
+          <h4 class="text-white text-xl uppercase">Quick Links</h4>
+          <ul class="text-sm py-6">
+            <li
+              class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light py-2"
+            >
+              <svg
+                class="h-4 pr-3"
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 290.98 213.83"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #fff;
+                    }
+                  </style>
+                </defs>
+                <polygon
+                  class="cls-1"
+                  points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
+                />
+                <polygon
+                  class="cls-1"
+                  points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
+                />
+              </svg>
+              <a href="/">Home</a>
+            </li>
+            <li
+              class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+            >
+              <svg
+                class="h-4 pr-3"
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 290.98 213.83"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #fff;
+                    }
+                  </style>
+                </defs>
+                <polygon
+                  class="cls-1"
+                  points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
+                />
+                <polygon
+                  class="cls-1"
+                  points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
+                />
+              </svg>
+              <a href="./visa.html">Visa</a>
+            </li>
+            <li
+              class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+            >
+              <svg
+                class="h-4 pr-3"
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 290.98 213.83"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #fff;
+                    }
+                  </style>
+                </defs>
+                <polygon
+                  class="cls-1"
+                  points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
+                />
+                <polygon
+                  class="cls-1"
+                  points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
+                />
+              </svg>
+              <a href="./blog.html">Blog</a>
+            </li>
+            <li
+              class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+            >
+              <svg
+                class="h-4 pr-3"
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 290.98 213.83"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #fff;
+                    }
+                  </style>
+                </defs>
+                <polygon
+                  class="cls-1"
+                  points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
+                />
+                <polygon
+                  class="cls-1"
+                  points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
+                />
+              </svg>
+              <a href="./about.html">About</a>
+            </li>
+            <li
+              class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+            >
+              <svg
+                class="h-4 pr-3"
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 290.98 213.83"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #fff;
+                    }
+                  </style>
+                </defs>
+                <polygon
+                  class="cls-1"
+                  points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
+                />
+                <polygon
+                  class="cls-1"
+                  points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
+                />
+              </svg>
+              <a href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="">
+          <h4 class="text-white text-xl uppercase">Visa</h4>
+          <ul class="text-sm py-6">
+            <li
+              class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light py-2"
+            >
+              <svg
+                class="h-4 pr-3"
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 290.98 213.83"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #fff;
+                    }
+                  </style>
+                </defs>
+                <polygon
+                  class="cls-1"
+                  points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
+                />
+                <polygon
+                  class="cls-1"
+                  points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
+                />
+              </svg>
+              <a href="#">Students Visa</a>
+            </li>
+            <li
+              class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+            >
+              <svg
+                class="h-4 pr-3"
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 290.98 213.83"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #fff;
+                    }
+                  </style>
+                </defs>
+                <polygon
+                  class="cls-1"
+                  points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
+                />
+                <polygon
+                  class="cls-1"
+                  points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
+                />
+              </svg>
+              <a href="#">Business Visa</a>
+            </li>
+            <li
+              class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+            >
+              <svg
+                class="h-4 pr-3"
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 290.98 213.83"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #fff;
+                    }
+                  </style>
+                </defs>
+                <polygon
+                  class="cls-1"
+                  points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
+                />
+                <polygon
+                  class="cls-1"
+                  points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
+                />
+              </svg>
+              <a href="#">Family Visa</a>
+            </li>
+            <li
+              class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+            >
+              <svg
+                class="h-4 pr-3"
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 290.98 213.83"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #fff;
+                    }
+                  </style>
+                </defs>
+                <polygon
+                  class="cls-1"
+                  points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
+                />
+                <polygon
+                  class="cls-1"
+                  points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
+                />
+              </svg>
+              <a href="#">Transit Visa</a>
+            </li>
+            <li
+              class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+            >
+              <svg
+                class="h-4 pr-3"
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 290.98 213.83"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #fff;
+                    }
+                  </style>
+                </defs>
+                <polygon
+                  class="cls-1"
+                  points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
+                />
+                <polygon
+                  class="cls-1"
+                  points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
+                />
+              </svg>
+              <a href="#">Work Visa</a>
+            </li>
+            <li
+              class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+            >
+              <svg
+                class="h-4 pr-3"
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 290.98 213.83"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #fff;
+                    }
+                  </style>
+                </defs>
+                <polygon
+                  class="cls-1"
+                  points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
+                />
+                <polygon
+                  class="cls-1"
+                  points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
+                />
+              </svg>
+              <a href="#">Visitor Visa</a>
+            </li>
+            <li
+              class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
+            >
+              <svg
+                class="h-4 pr-3"
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 290.98 213.83"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #fff;
+                    }
+                  </style>
+                </defs>
+                <polygon
+                  class="cls-1"
+                  points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
+                />
+                <polygon
+                  class="cls-1"
+                  points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
+                />
+              </svg>
+              <a href="#">Medical Visa</a>
+            </li>
+          </ul>
+        </div>
+        <div class="">
+          <h4 class="text-white text-xl uppercase">Contact Us</h4>
+          <ul class="text-sm py-6">
+            <h4 class="text-white uppercase text-xl">Kenya</h4>
+            <li class="text-white opacity-60 font-light text-lg pb-2">
+              <a href="#"
+                >CornerHouse 6th floor Suite A8 along Kimathi Street,
+                Nairobi.</a
+              >
+            </li>
+            <li
+              class="mt-4 flex flex-col text-white text-lg opacity-60 font-light pb-2"
+            >
+              <!-- <span class="pb-2">+254 731 999 376</span> -->
+              <span>+254 790 004 155</span>
+            </li>
+            <h4 class="text-white uppercase text-xl">Germany</h4>
+            <li class="text-white opacity-60 font-light text-lg pb-2">
+              <a href="#">Trier Germany</a>
+            </li>
+            <li
+              class="mt-4 flex flex-col text-white text-lg opacity-60 font-light pb-2"
+            >
+              <span class="pb-2">+49 1521 5481073</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="container mx-auto bg-darkBlue px-3 py-8 flex items-center justify-center border-t-2 border-white"
+      >
+        <p class="text-sm text-white font-light">
+          Copyright &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          <span class="text-red">Victora Visa Consultants</span>. All Rights
+          Reserved.
+        </p>
+      </div>
+    </footer>
 
-		<!-- WhatsApp Widget -->
-		<div id="whatsapp-chat" class="hide">
-			<div class="header-chat">
-				<div class="head-home">
-					<div class="info-avatar">
-						<img
-							src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1651503055/Victoriavisaconsultants/logo_icon-1_gft6za.png"
-						/>
-					</div>
-					<p>
-						<span class="whatsapp-name">Victoria Visa Consultants</span
-						><br /><small>Typically replies within an hour</small>
-					</p>
-				</div>
-				<div class="get-new hide">
-					<div id="get-label"></div>
-					<div id="get-nama"></div>
-				</div>
-			</div>
-			<div class="home-chat"></div>
-			<div class="start-chat">
-				<div
-					pattern="https://elfsight.com/assets/chats/patterns/whatsapp.png"
-					class="WhatsappChat__Component-sc-1wqac52-0 whatsapp-chat-body"
-				>
-					<div class="WhatsappChat__MessageContainer-sc-1wqac52-1 dAbFpq">
-						<div
-							style="opacity: 0"
-							class="WhatsappDots__Component-pks5bf-0 eJJEeC"
-						>
-							<div class="WhatsappDots__ComponentInner-pks5bf-1 hFENyl">
-								<div
-									class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotOne-pks5bf-3 ixsrax"
-								></div>
-								<div
-									class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotTwo-pks5bf-4 dRvxoz"
-								></div>
-								<div
-									class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotThree-pks5bf-5 kXBtNt"
-								></div>
-							</div>
-						</div>
-						<div
-							style="opacity: 1"
-							class="WhatsappChat__Message-sc-1wqac52-4 kAZgZq"
-						>
-							<div class="WhatsappChat__Author-sc-1wqac52-3 bMIBDo">
-								Visa Agent
-							</div>
-							<div class="WhatsappChat__Text-sc-1wqac52-2 iSpIQi">
-								Hi there 👋<br /><br />How can I help you?
-							</div>
-							<div class="WhatsappChat__Time-sc-1wqac52-5 cqCDVm">1:40</div>
-						</div>
-					</div>
-				</div>
+    <!-- WhatsApp Widget -->
+    <div id="whatsapp-chat" class="hide">
+      <div class="header-chat">
+        <div class="head-home">
+          <div class="info-avatar">
+            <img
+              src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1651503055/Victoriavisaconsultants/logo_icon-1_gft6za.png"
+            />
+          </div>
+          <p>
+            <span class="whatsapp-name">Victoria Visa Consultants</span
+            ><br /><small>Typically replies within an hour</small>
+          </p>
+        </div>
+        <div class="get-new hide">
+          <div id="get-label"></div>
+          <div id="get-nama"></div>
+        </div>
+      </div>
+      <div class="home-chat"></div>
+      <div class="start-chat">
+        <div
+          pattern="https://elfsight.com/assets/chats/patterns/whatsapp.png"
+          class="WhatsappChat__Component-sc-1wqac52-0 whatsapp-chat-body"
+        >
+          <div class="WhatsappChat__MessageContainer-sc-1wqac52-1 dAbFpq">
+            <div
+              style="opacity: 0"
+              class="WhatsappDots__Component-pks5bf-0 eJJEeC"
+            >
+              <div class="WhatsappDots__ComponentInner-pks5bf-1 hFENyl">
+                <div
+                  class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotOne-pks5bf-3 ixsrax"
+                ></div>
+                <div
+                  class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotTwo-pks5bf-4 dRvxoz"
+                ></div>
+                <div
+                  class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotThree-pks5bf-5 kXBtNt"
+                ></div>
+              </div>
+            </div>
+            <div
+              style="opacity: 1"
+              class="WhatsappChat__Message-sc-1wqac52-4 kAZgZq"
+            >
+              <div class="WhatsappChat__Author-sc-1wqac52-3 bMIBDo">
+                Visa Agent
+              </div>
+              <div class="WhatsappChat__Text-sc-1wqac52-2 iSpIQi">
+                Hi there 👋<br /><br />How can I help you?
+              </div>
+              <div class="WhatsappChat__Time-sc-1wqac52-5 cqCDVm">1:40</div>
+            </div>
+          </div>
+        </div>
 
-				<div class="blanter-msg">
-					<textarea
-						id="chat-input"
-						placeholder="Write a response"
-						maxlength="120"
-						row="1"
-					></textarea>
-					<a href="javascript:void;" id="send-it"
-						><svg viewBox="0 0 448 448">
-							<path d="M.213 32L0 181.333 320 224 0 266.667.213 416 448 224z" />
-						</svg>
-					</a>
-				</div>
-			</div>
-			<div id="get-number"></div>
-			<a class="close-chat" href="javascript:void">×</a>
-		</div>
-		<a class="blantershow-chat" href="javascript:void" title="Show Chat">
-			<svg width="20" viewBox="0 0 24 24">
-				<defs />
-				<path
-					fill="#eceff1"
-					d="M20.5 3.4A12.1 12.1 0 0012 0 12 12 0 001.7 17.8L0 24l6.3-1.7c2.8 1.5 5 1.4 5.8 1.5a12 12 0 008.4-20.3z"
-				/>
-				<path
-					fill="#4caf50"
-					d="M12 21.8c-3.1 0-5.2-1.6-5.4-1.6l-3.7 1 1-3.7-.3-.4A9.9 9.9 0 012.1 12a10 10 0 0117-7 9.9 9.9 0 01-7 16.9z"
-				/>
-				<path
-					fill="#fafafa"
-					d="M17.5 14.3c-.3 0-1.8-.8-2-.9-.7-.2-.5 0-1.7 1.3-.1.2-.3.2-.6.1s-1.3-.5-2.4-1.5a9 9 0 01-1.7-2c-.3-.6.4-.6 1-1.7l-.1-.5-1-2.2c-.2-.6-.4-.5-.6-.5-.6 0-1 0-1.4.3-1.6 1.8-1.2 3.6.2 5.6 2.7 3.5 4.2 4.2 6.8 5 .7.3 1.4.3 1.9.2.6 0 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"
-				/>
-			</svg>
-			Chat with Us
-		</a>
-		<script
-			src="https://code.jquery.com/jquery-3.6.0.min.js"
-			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-			crossorigin="anonymous"
-		></script>
-		<script src="./js/main.js"></script>
-		<script src="js/script.js"></script>
-	</body>
+        <div class="blanter-msg">
+          <textarea
+            id="chat-input"
+            placeholder="Write a response"
+            maxlength="120"
+            row="1"
+          ></textarea>
+          <a href="javascript:void;" id="send-it"
+            ><svg viewBox="0 0 448 448">
+              <path d="M.213 32L0 181.333 320 224 0 266.667.213 416 448 224z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div id="get-number"></div>
+      <a class="close-chat" href="javascript:void">×</a>
+    </div>
+    <a class="blantershow-chat" href="javascript:void" title="Show Chat">
+      <svg width="20" viewBox="0 0 24 24">
+        <defs />
+        <path
+          fill="#eceff1"
+          d="M20.5 3.4A12.1 12.1 0 0012 0 12 12 0 001.7 17.8L0 24l6.3-1.7c2.8 1.5 5 1.4 5.8 1.5a12 12 0 008.4-20.3z"
+        />
+        <path
+          fill="#4caf50"
+          d="M12 21.8c-3.1 0-5.2-1.6-5.4-1.6l-3.7 1 1-3.7-.3-.4A9.9 9.9 0 012.1 12a10 10 0 0117-7 9.9 9.9 0 01-7 16.9z"
+        />
+        <path
+          fill="#fafafa"
+          d="M17.5 14.3c-.3 0-1.8-.8-2-.9-.7-.2-.5 0-1.7 1.3-.1.2-.3.2-.6.1s-1.3-.5-2.4-1.5a9 9 0 01-1.7-2c-.3-.6.4-.6 1-1.7l-.1-.5-1-2.2c-.2-.6-.4-.5-.6-.5-.6 0-1 0-1.4.3-1.6 1.8-1.2 3.6.2 5.6 2.7 3.5 4.2 4.2 6.8 5 .7.3 1.4.3 1.9.2.6 0 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"
+        />
+      </svg>
+      Chat with Us
+    </a>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+    <script src="js/script.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-16526513120"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-16526513120");
+    </script>
+  </body>
 </html>
