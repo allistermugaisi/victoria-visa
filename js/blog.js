@@ -1,16 +1,16 @@
-let blogContent = document.getElementById('blog-content');
+let blogContent = document.getElementById("blog-content");
 
 let AUTH_TOKEN =
-	'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdjbXMtbWFpbi1wcm9kdWN0aW9uIn0.eyJ2ZXJzaW9uIjozLCJpYXQiOjE2NTk3MTU1MDQsImF1ZCI6WyJodHRwczovL2FwaS1ldS13ZXN0LTIuaHlncmFwaC5jb20vdjIvY2w2Z2dodmcyM2ViMzAxdGE0MzVqYTRpei9tYXN0ZXIiLCJtYW5hZ2VtZW50LW5leHQuZ3JhcGhjbXMuY29tIl0sImlzcyI6Imh0dHBzOi8vbWFuYWdlbWVudC5ncmFwaGNtcy5jb20vIiwic3ViIjoiNDkxYTJhOTYtNjAyZi00MGY5LWJjOGItYjJhMmIzNzFiY2U4IiwianRpIjoiY2w2Z25yYjZ0M2U1ZjAxdWhmdHlzZWR2NiJ9.FPBVmnPNhZA9JzERQvsu1ak_85vrBlxPz98KFrR99ajGJeklVkn8t5g84wTzzpTjNFZpDE268SSbxBRF7PgQVAgO6AX0nXzT9MQp4luZL9ZT55b-H7pzzb7HWC5xbNjYqA5sQNvrhxzJyv7JYumr7TrtnvfIeFaEehjnI-zSx4VlwT9ELg9uTrZ90kWYFqRdvuKrKsCtKBs5JfytXGF9UEpwGJLVdOtwc3NKHu4fG7IQGy6CktgpkKV3AvrLyHztCLSVmdDXm5HLy29-NuD7VvuZrTtlcj4mg7XOzWCKoHPPLHMWoA1pBMPJj_gcP_eLbNEOzk5e3DE12IerdEyI7Ubgz1vYTUk4ZqvSqCaTRln0OhXm3lQUVGLkgRAzaQiPS7n3zkA_vrdHq6nz_cuq9OXGPg150GBXCFF3GmWL7DbZJ4L-q3DlwaWfUGRk3_ggH9S2555n5a-Am8KCTLX_We-P82XkaS2HWsY4ZgMU2B8hIiJ0omQWdkINueq8OaD-G6AV2eTaBYVm3x0-M23Vl4ibKFo3dHzP3QxGnUunw0-ygEC2js9VOGiw92ujFh5XJ2p5R58ZrpcfHzWiXPbF8TPPFo61fPUovBwGm4yD6LpyqtO1W1U8I0ehzCdDk-FAEjkWVBrq9E5eFYEkF8xVXTJYJ1HoFGYJjEOwsGO7rvU';
+  "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdjbXMtbWFpbi1wcm9kdWN0aW9uIn0.eyJ2ZXJzaW9uIjozLCJpYXQiOjE2NTk3MTU1MDQsImF1ZCI6WyJodHRwczovL2FwaS1ldS13ZXN0LTIuaHlncmFwaC5jb20vdjIvY2w2Z2dodmcyM2ViMzAxdGE0MzVqYTRpei9tYXN0ZXIiLCJtYW5hZ2VtZW50LW5leHQuZ3JhcGhjbXMuY29tIl0sImlzcyI6Imh0dHBzOi8vbWFuYWdlbWVudC5ncmFwaGNtcy5jb20vIiwic3ViIjoiNDkxYTJhOTYtNjAyZi00MGY5LWJjOGItYjJhMmIzNzFiY2U4IiwianRpIjoiY2w2Z25yYjZ0M2U1ZjAxdWhmdHlzZWR2NiJ9.FPBVmnPNhZA9JzERQvsu1ak_85vrBlxPz98KFrR99ajGJeklVkn8t5g84wTzzpTjNFZpDE268SSbxBRF7PgQVAgO6AX0nXzT9MQp4luZL9ZT55b-H7pzzb7HWC5xbNjYqA5sQNvrhxzJyv7JYumr7TrtnvfIeFaEehjnI-zSx4VlwT9ELg9uTrZ90kWYFqRdvuKrKsCtKBs5JfytXGF9UEpwGJLVdOtwc3NKHu4fG7IQGy6CktgpkKV3AvrLyHztCLSVmdDXm5HLy29-NuD7VvuZrTtlcj4mg7XOzWCKoHPPLHMWoA1pBMPJj_gcP_eLbNEOzk5e3DE12IerdEyI7Ubgz1vYTUk4ZqvSqCaTRln0OhXm3lQUVGLkgRAzaQiPS7n3zkA_vrdHq6nz_cuq9OXGPg150GBXCFF3GmWL7DbZJ4L-q3DlwaWfUGRk3_ggH9S2555n5a-Am8KCTLX_We-P82XkaS2HWsY4ZgMU2B8hIiJ0omQWdkINueq8OaD-G6AV2eTaBYVm3x0-M23Vl4ibKFo3dHzP3QxGnUunw0-ygEC2js9VOGiw92ujFh5XJ2p5R58ZrpcfHzWiXPbF8TPPFo61fPUovBwGm4yD6LpyqtO1W1U8I0ehzCdDk-FAEjkWVBrq9E5eFYEkF8xVXTJYJ1HoFGYJjEOwsGO7rvU";
 
-fetch('https://api-eu-west-2.hygraph.com/v2/cl6gghvg23eb301ta435ja4iz/master', {
-	method: 'POST',
-	headers: {
-		Authorization: `Bearer ${AUTH_TOKEN}`,
-		'Content-Type': 'application/json',
-	},
-	body: JSON.stringify({
-		query: `
+fetch("https://api-eu-west-2.hygraph.com/v2/cl6gghvg23eb301ta435ja4iz/master", {
+  method: "POST",
+  headers: {
+    Authorization: `Bearer ${AUTH_TOKEN}`,
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    query: `
         query {
             posts {
               id
@@ -50,23 +50,23 @@ fetch('https://api-eu-west-2.hygraph.com/v2/cl6gghvg23eb301ta435ja4iz/master', {
             }
           }
         `,
-	}),
+  }),
 })
-	.then((res) => res.json())
-	.then((result) => {
-		return result.data.posts.forEach((post) => {
-			const {
-				author,
-				title,
-				subTitle,
-				category,
-				photo,
-				content: { markdown, html },
-				datePublished,
-			} = post;
-			// console.log(html);
+  .then((res) => res.json())
+  .then((result) => {
+    return result.data.posts.forEach((post) => {
+      const {
+        author,
+        title,
+        subTitle,
+        category,
+        photo,
+        content: { markdown, html },
+        datePublished,
+      } = post;
+      // console.log(html);
 
-			let article = `
+      let article_old = `
             		<div>
 						<div>
 							<img
@@ -97,6 +97,30 @@ fetch('https://api-eu-west-2.hygraph.com/v2/cl6gghvg23eb301ta435ja4iz/master', {
 					</div>
             `;
 
-			return (blogContent.innerHTML += article);
-		});
-	});
+      let article = `
+	  		<div class="rounded-lg">
+              <div>
+                <img
+                  class="h-44 w-full object-cover object-center rounded-lg"
+				  src=${photo[0]?.url}
+				  alt=${photo[0]?.fileName}
+                  
+                />
+              </div>
+              <div class="col-span-2">
+                <h6 class="text-xs mt-2">
+                  <span class="opacity-60">18 hours ago - 6 min read</span>
+                </h6>
+                <h4 class="text-base text-darkBlue py-1">
+					${title}
+                </h4>
+                <p class="opacity-80 font-light text-xs clamp-2">
+					${subTitle}
+                </p>
+              </div>
+            </div>
+	  `;
+
+      return (blogContent.innerHTML += article);
+    });
+  });
