@@ -24,69 +24,131 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="relative xl:container mx-auto px-4 xl:px-10">
-      <!-- Flex container -->
-      <div class="flex items-center justify-around md:justify-between">
+    <nav class="sticky top-0 bg-white z-50 shadow-md">
+      <div
+        class="container mx-auto px-6 sm:px-0 md:flex items-center justify-around"
+      >
         <!-- Logo -->
-        <div class="">
-          <a href="/" class="logo"></a>
+        <div class="flex items-center justify-between md:w-auto w-full">
+          <a
+            href="/"
+            class="logo flex items-center py-5 px-2 text-white flex-1"
+          >
+          </a>
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center">
+            <button class="mobile-menu-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <title>bars-3-bottom-left</title>
+                <g fill="none">
+                  <path
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </button>
+          </div>
         </div>
-        <!-- Menu Items -->
-        <div class="hidden space-x-6 md:flex">
-          <a href="/" class="text-darkBlue hover:text-red-500 font-semibold"
+        <!-- Primary Navigation -->
+        <div
+          class="hidden md:flex md:flex-row flex-col items-center justify-start md:space-x-1 navigation-menu pb-3 md:pb-0 navigation-menu"
+        >
+          <a
+            href="/"
+            class="text-darkBlue hover:text-red-500 font-medium py-2 px-3 block"
             >Home</a
           >
-          <a
-            href="/visa.html"
-            class="text-darkBlue hover:text-red-500 font-semibold"
-            >Visa</a
-          >
+          <!-- Dropdown Menu -->
+          <div class="relative">
+            <button
+              class="dropdown-toggle py-2 px-3 text-darkBlue hover:text-red-500 flex items-center gap-2 rounded"
+            >
+              <span class="pointer-events-none">Visa</span>
+              <svg
+                class="w-3 h-3 pointer-events-none"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <title>chevron-down</title>
+                <g fill="none">
+                  <path
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </button>
+            <div
+              class="dropdown-menu absolute z-10 hidden text-base shadow-sm bg-white text-gray-700 rounded-b-sm pb-2 w-48"
+            >
+              <a
+                href="/visa.html"
+                class="block px-6 py-2 hover:bg-gray-100 hover:text-red-500"
+                >Student Visa</a
+              >
+              <a
+                href="/visa/family-visa.html"
+                class="block px-6 py-2 hover:bg-gray-100 hover:text-red-500"
+                >Family Visa</a
+              >
+              <a
+                href="/visa/business-visa.html"
+                class="block px-6 py-2 hover:bg-gray-100 hover:text-red-500"
+                >Business Visa</a
+              >
+              <a
+                href="/visa/transit-visa.html"
+                class="block px-6 py-2 hover:bg-gray-100 hover:text-red-500"
+                >Transit Visa</a
+              >
+              <a
+                href="/visa/work-visa.html"
+                class="block px-6 py-2 hover:bg-gray-100 hover:text-red-500"
+                >Work Visa</a
+              >
+              <a
+                href="/visa/medical-visa.html"
+                class="block px-6 py-2 hover:bg-gray-100 hover:text-red-500"
+                >Medical Visa</a
+              >
+            </div>
+          </div>
           <a
             href="/about.html"
-            class="text-darkBlue hover:text-red-500 font-semibold"
+            class="text-darkBlue hover:text-red-500 font-medium py-2 px-3 block"
             >About</a
           >
           <a
             href="/blog.html"
-            class="text-darkBlue hover:text-red-500 font-semibold"
+            class="text-darkBlue hover:text-red-500 font-medium py-2 px-3 block"
             >Blog</a
           >
           <a
             href="/contact.html"
-            class="text-darkBlue hover:text-red-500 font-semibold"
+            class="text-darkBlue hover:text-red-500 font-medium py-2 px-3 block"
             >Contact</a
           >
         </div>
         <!-- Button -->
         <a
-          href="/contact.html"
-          class="hidden px-4 py-8 text-white uppercase tracking-normal bg-red-500 baseline hover:bg-darkBlue md:block ease-in duration-300"
+          href="#"
+          class="hidden lg:block px-4 py-8 text-white uppercase tracking-normal bg-red-500 baseline hover:bg-darkBlue ease-in duration-300"
           >Get Consultation</a
         >
-
-        <!-- Hamburger Icon -->
-        <button
-          id="menu-btn"
-          class="block hamburger md:hidden focus:outline-none"
-        >
-          <span class="hamburger-top"></span>
-          <span class="hamburger-middle"></span>
-          <span class="hamburger-bottom"></span>
-        </button>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div class="md:hidden">
-        <div
-          id="menu"
-          class="z-[200] absolute rounded flex-col items-center hidden self-end text-white py-8 mt-4 space-y-6 font-bold bg-red-500 sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
-        >
-          <a href="/">Home</a>
-          <a href="/visa.html">Visa</a>
-          <a href="/about.html">About</a>
-          <a href="/blog.html">Blog</a>
-          <a href="/contact.html">Contact</a>
-        </div>
       </div>
     </nav>
 
@@ -407,8 +469,10 @@
 
     <!-- Footer -->
     <footer class="bg-darkBlue py-14">
-      <div class="container mx-auto grid lg:grid-cols-5 gap-4 px-7">
-        <div class="mb-4 md:mb-0 md:col-span-2">
+      <div
+        class="xl:container mx-auto flex flex-col xl:flex-row justify-around px-7 xl:px-20"
+      >
+        <div class="mb-4 md:mb-0 max-w-full lg:max-w-sm">
           <div class="text-white text-sm">
             <div class="">
               <a href="/" class="footer-logo"></a>
@@ -420,7 +484,7 @@
             </p>
           </div>
         </div>
-        <div class="">
+        <div class="max-w-full lg:max-w-auto">
           <h4 class="text-white text-xl uppercase">Quick Links</h4>
           <ul class="text-sm py-6">
             <li
@@ -477,7 +541,7 @@
                   points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
                 />
               </svg>
-              <a href="./visa.html">Visa</a>
+              <a href="/visa.html">Visa</a>
             </li>
             <li
               class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
@@ -505,7 +569,7 @@
                   points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
                 />
               </svg>
-              <a href="./blog.html">Blog</a>
+              <a href="/blog.html">Blog</a>
             </li>
             <li
               class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
@@ -533,7 +597,7 @@
                   points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
                 />
               </svg>
-              <a href="./about.html">About</a>
+              <a href="/about.html">About</a>
             </li>
             <li
               class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
@@ -561,11 +625,11 @@
                   points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
                 />
               </svg>
-              <a href="./contact.html">Contact</a>
+              <a href="/contact.html">Contact</a>
             </li>
           </ul>
         </div>
-        <div class="">
+        <div class="max-w-full lg:max-w-auto">
           <h4 class="text-white text-xl uppercase">Visa</h4>
           <ul class="text-sm py-6">
             <li
@@ -594,7 +658,7 @@
                   points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
                 />
               </svg>
-              <a href="#">Students Visa</a>
+              <a href="/visa.html">Students Visa</a>
             </li>
             <li
               class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
@@ -622,7 +686,7 @@
                   points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
                 />
               </svg>
-              <a href="#">Business Visa</a>
+              <a href="/visa/business-visa.html">Business Visa</a>
             </li>
             <li
               class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
@@ -650,7 +714,7 @@
                   points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
                 />
               </svg>
-              <a href="#">Family Visa</a>
+              <a href="/visa/family-visa.html">Family Visa</a>
             </li>
             <li
               class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
@@ -678,7 +742,7 @@
                   points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
                 />
               </svg>
-              <a href="#">Transit Visa</a>
+              <a href="/visa/transit-visa.html">Transit Visa</a>
             </li>
             <li
               class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
@@ -706,7 +770,7 @@
                   points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
                 />
               </svg>
-              <a href="#">Work Visa</a>
+              <a href="/visa/work-visa.html">Work Visa</a>
             </li>
             <li
               class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
@@ -734,39 +798,11 @@
                   points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
                 />
               </svg>
-              <a href="#">Visitor Visa</a>
-            </li>
-            <li
-              class="text-white flex items-center text-lg opacity-60 hover:opacity-100 hover:text-white font-light pb-2"
-            >
-              <svg
-                class="h-4 pr-3"
-                id="Layer_1"
-                data-name="Layer 1"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 290.98 213.83"
-              >
-                <defs>
-                  <style>
-                    .cls-1 {
-                      fill: #fff;
-                    }
-                  </style>
-                </defs>
-                <polygon
-                  class="cls-1"
-                  points="203.91 0 76.23 0 163.29 106.92 76.23 213.83 203.91 213.83 290.98 106.92 203.91 0"
-                />
-                <polygon
-                  class="cls-1"
-                  points="41.68 0 0 0 87.06 106.92 0 213.83 41.68 213.83 128.74 106.92 41.68 0"
-                />
-              </svg>
-              <a href="#">Medical Visa</a>
+              <a href="/visa/medical-visa.html">Medical Visa</a>
             </li>
           </ul>
         </div>
-        <div class="">
+        <div class="max-w-full lg:max-w-auto">
           <h4 class="text-white text-xl uppercase">Contact Us</h4>
           <ul class="text-sm py-6">
             <h4 class="text-white uppercase text-xl">Kenya</h4>
@@ -782,14 +818,14 @@
               <!-- <span class="pb-2">+254 731 999 376</span> -->
               <span>+254 790 004 155</span>
             </li>
-            <h4 class="text-white uppercase text-xl">Germany</h4>
+            <h4 class="text-white uppercase text-xl">HongKong</h4>
             <li class="text-white opacity-60 font-light text-lg pb-2">
-              <a href="#">Trier Germany</a>
+              <a href="#">HongKong, China</a>
             </li>
             <li
               class="mt-4 flex flex-col text-white text-lg opacity-60 font-light pb-2"
             >
-              <span class="pb-2">+49 1521 5481073</span>
+              <span class="pb-2">+852 9474 2247</span>
             </li>
           </ul>
         </div>

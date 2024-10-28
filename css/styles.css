@@ -1,586 +1,587 @@
 .logo {
-	display: block;
-	text-indent: -9999px;
-	width: 200px;
-	height: 90px;
-	background: url('https://res.cloudinary.com/dgisuffs0/image/upload/v1656072093/Victoria_pc9hpz.svg');
-	background-size: 200px 90px;
+  display: block;
+  text-indent: -9999px;
+  width: 200px;
+  height: 90px;
+  background: url("https://res.cloudinary.com/dgisuffs0/image/upload/v1656072093/Victoria_pc9hpz.svg");
+  background-size: 200px 90px;
+  background-repeat: no-repeat;
 }
 /* Hamburger Menu */
 
 .hamburger {
-	cursor: pointer;
-	width: 24px;
-	height: 24px;
-	transition: all 0.25s;
-	position: relative;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
 }
 
 .hamburger-top,
 .hamburger-middle,
 .hamburger-bottom {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 24px;
-	height: 2px;
-	background: #2b3f69;
-	transform: rotate(0);
-	transition: all 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #2b3f69;
+  transform: rotate(0);
+  transition: all 0.5s;
 }
 
 .hamburger-middle {
-	transform: translateY(7px);
+  transform: translateY(7px);
 }
 
 .hamburger-bottom {
-	transform: translateY(14px);
+  transform: translateY(14px);
 }
 
 .open {
-	transform: rotate(90deg);
-	transform: translateY(0px);
+  transform: rotate(90deg);
+  transform: translateY(0px);
 }
 
 .open .hamburger-top {
-	transform: rotate(45deg) translateY(6px) translate(6px);
+  transform: rotate(45deg) translateY(6px) translate(6px);
 }
 
 .open .hamburger-middle {
-	display: none;
+  display: none;
 }
 
 .open .hamburger-bottom {
-	transform: rotate(-45deg) translateY(6px) translate(-6px);
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
 
 .footer-logo {
-	display: block;
-	text-indent: -9999px;
-	width: 200px;
-	height: 90px;
-	background: url('https://res.cloudinary.com/dgisuffs0/image/upload/v1656576480/Victoria_tgh4em.svg');
-	background-size: 200px 90px;
+  display: block;
+  text-indent: -9999px;
+  width: 200px;
+  height: 90px;
+  background: url("https://res.cloudinary.com/dgisuffs0/image/upload/v1656576480/Victoria_tgh4em.svg");
+  background-size: 200px 90px;
 }
 
 @keyframes tonext {
-	75% {
-		left: 0;
-	}
-	95% {
-		left: 100%;
-	}
-	98% {
-		left: 100%;
-	}
-	99% {
-		left: 0;
-	}
+  75% {
+    left: 0;
+  }
+  95% {
+    left: 100%;
+  }
+  98% {
+    left: 100%;
+  }
+  99% {
+    left: 0;
+  }
 }
 
 @keyframes tostart {
-	75% {
-		left: 0;
-	}
-	95% {
-		left: -300%;
-	}
-	98% {
-		left: -300%;
-	}
-	99% {
-		left: 0;
-	}
+  75% {
+    left: 0;
+  }
+  95% {
+    left: -300%;
+  }
+  98% {
+    left: -300%;
+  }
+  99% {
+    left: 0;
+  }
 }
 
 @keyframes snap {
-	96% {
-		scroll-snap-align: center;
-	}
-	97% {
-		scroll-snap-align: none;
-	}
-	99% {
-		scroll-snap-align: none;
-	}
-	100% {
-		scroll-snap-align: center;
-	}
+  96% {
+    scroll-snap-align: center;
+  }
+  97% {
+    scroll-snap-align: none;
+  }
+  99% {
+    scroll-snap-align: none;
+  }
+  100% {
+    scroll-snap-align: center;
+  }
 }
 
 ol,
 li {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .carousel {
-	position: relative;
-	padding-top: 40%;
-	filter: drop-shadow(0 0 10px #0003);
-	perspective: 100px;
+  position: relative;
+  padding-top: 40%;
+  filter: drop-shadow(0 0 10px #0003);
+  perspective: 100px;
 }
 
 .carousel__viewport {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	display: flex;
-	overflow-x: scroll;
-	scrollbar-width: none;
-	counter-reset: item;
-	scroll-behavior: smooth;
-	scroll-snap-type: x mandatory;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  counter-reset: item;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 }
 .carousel__viewport::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 .carousel__slide {
-	position: relative;
-	flex: 0 0 100%;
-	width: 100%;
-	counter-increment: item;
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  counter-increment: item;
 }
 
 .carousel__slide:nth-child(1) {
-	background-size: cover;
-	background-color: rgba(43, 63, 105, 0.5);
-	background-repeat: no-repeat;
-	background-blend-mode: multiply;
-	background-image: url('https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078283/Victoriavisaconsultants/105_lzmca1.jpg');
+  background-size: cover;
+  background-color: rgba(43, 63, 105, 0.5);
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-image: url("https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078283/Victoriavisaconsultants/105_lzmca1.jpg");
 }
 .carousel__slide:nth-child(1):before {
-	content: 'Study Abroad';
-	position: absolute;
-	top: 70%;
-	left: 50%;
-	text-transform: uppercase;
-	transform: translate3d(-50%, -40%, 70px);
-	color: #fff;
-	font-size: 3em;
-	font-weight: bold;
+  content: "Study Abroad";
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  text-transform: uppercase;
+  transform: translate3d(-50%, -40%, 70px);
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
 }
 
 .carousel__slide:nth-child(2) {
-	background-size: contain;
-	background-position: center;
-	background-color: rgba(43, 63, 105, 0.5);
-	background-blend-mode: multiply;
-	background-repeat: no-repeat;
-	background-image: url('https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078284/Victoriavisaconsultants/111_e6zs8y.jpg');
+  background-size: contain;
+  background-position: center;
+  background-color: rgba(43, 63, 105, 0.5);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-image: url("https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078284/Victoriavisaconsultants/111_e6zs8y.jpg");
 }
 .carousel__slide:nth-child(2):before {
-	content: 'Family Visa';
-	position: absolute;
-	top: 70%;
-	left: 50%;
-	text-transform: uppercase;
-	transform: translate3d(10%, 40%, 70px);
-	color: #fff;
-	font-size: 3em;
-	font-weight: bold;
+  content: "Family Visa";
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  text-transform: uppercase;
+  transform: translate3d(10%, 40%, 70px);
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
 }
 
 .carousel__slide:nth-child(3) {
-	background-size: contain;
-	background-position: center;
-	background-color: rgba(43, 63, 105, 0.5);
-	background-blend-mode: multiply;
-	background-repeat: no-repeat;
-	background-image: url('https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078283/Victoriavisaconsultants/106_tfh7ed.jpg');
+  background-size: contain;
+  background-position: center;
+  background-color: rgba(43, 63, 105, 0.5);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-image: url("https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078283/Victoriavisaconsultants/106_tfh7ed.jpg");
 }
 .carousel__slide:nth-child(3):before {
-	content: 'Business Visa';
-	position: absolute;
-	top: 70%;
-	left: 50%;
-	text-transform: uppercase;
-	transform: translate3d(-95%, 40%, 70px);
-	color: #fff;
-	font-size: 3em;
-	font-weight: bold;
+  content: "Business Visa";
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  text-transform: uppercase;
+  transform: translate3d(-95%, 40%, 70px);
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
 }
 
 .carousel__slide:nth-child(4) {
-	background-position: center;
-	background-size: contain;
-	background-color: #f99;
-	background-repeat: no-repeat;
-	background-image: url('https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078287/Victoriavisaconsultants/110_xx2yzw.png');
+  background-position: center;
+  background-size: contain;
+  background-color: #f99;
+  background-repeat: no-repeat;
+  background-image: url("https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078287/Victoriavisaconsultants/110_xx2yzw.png");
 }
 .carousel__slide:nth-child(4):before {
-	content: 'Transit Visa';
-	position: absolute;
-	top: 70%;
-	left: 50%;
-	text-transform: uppercase;
-	transform: translate3d(-185%, 10%, 50px);
-	color: #fff;
-	font-size: 3em;
-	font-weight: bold;
+  content: "Transit Visa";
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  text-transform: uppercase;
+  transform: translate3d(-185%, 10%, 50px);
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
 }
 
 .carousel__snapper {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	scroll-snap-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
 }
 
 @media (hover: hover) {
-	.carousel__snapper {
-		animation-name: tonext, snap;
-		animation-timing-function: ease;
-		animation-duration: 3s;
-		animation-iteration-count: infinite;
-	}
+  .carousel__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
 
-	.carousel__slide:last-child .carousel__snapper {
-		animation-name: tostart, snap;
-	}
+  .carousel__slide:last-child .carousel__snapper {
+    animation-name: tostart, snap;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-	.carousel__snapper {
-		animation-name: none;
-	}
+  .carousel__snapper {
+    animation-name: none;
+  }
 }
 
 .carousel:hover .carousel__snapper,
 .carousel:focus-within .carousel__snapper {
-	animation-name: none;
+  animation-name: none;
 }
 
 .carousel__navigation {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	text-align: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
 }
 
 .carousel__navigation-list,
 .carousel__navigation-item {
-	display: inline-block;
+  display: inline-block;
 }
 
 .carousel__navigation-button {
-	display: inline-block;
-	width: 1rem;
-	height: 1rem;
-	background-color: #fff;
-	background-clip: content-box;
-	border: 0.25rem solid transparent;
-	border-radius: 50%;
-	font-size: 0;
-	transition: transform 0.1s;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+  background-clip: content-box;
+  border: 0.25rem solid transparent;
+  border-radius: 50%;
+  font-size: 0;
+  transition: transform 0.1s;
 }
 
 .carousel__prev,
 .carousel__next {
-	position: absolute;
-	top: 0;
-	margin-top: 20%;
-	width: 4rem;
-	height: 4rem;
-	transform: translateY(-50%);
-	border-radius: 50%;
-	font-size: 0;
-	outline: 0;
+  position: absolute;
+  top: 0;
+  margin-top: 20%;
+  width: 4rem;
+  height: 4rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  font-size: 0;
+  outline: 0;
 }
 
 .carousel__prev {
-	left: 1rem;
+  left: 1rem;
 }
 
 .carousel__next {
-	right: 1rem;
+  right: 1rem;
 }
 
 @media only screen and (max-width: 768px) {
-	.carousel {
-		position: relative;
-		padding-top: 60%;
-		filter: drop-shadow(0 0 10px #0003);
-		perspective: 100px;
-	}
-	.carousel__slide:nth-child(1):before {
-		content: 'Study Abroad';
-		position: absolute;
-		top: 70%;
-		left: 50%;
-		text-transform: uppercase;
-		transform: translate3d(-50%, -40%, 70px);
-		color: #fff;
-		font-size: 1em;
-		font-weight: bold;
-	}
-	.carousel__slide:nth-child(2):before {
-		content: 'Family Visa';
-		position: absolute;
-		top: 70%;
-		left: 50%;
-		text-transform: uppercase;
-		transform: translate3d(40%, -40%, 70px);
-		color: #fff;
-		font-size: 1em;
-		font-weight: bold;
-	}
-	.carousel__slide:nth-child(3):before {
-		content: 'Business Visa';
-		position: absolute;
-		top: 70%;
-		left: 50%;
-		text-transform: uppercase;
-		transform: translate3d(-95%, 20%, 70px);
-		color: #fff;
-		font-size: 1em;
-		font-weight: bold;
-	}
-	.carousel__slide:nth-child(4):before {
-		content: 'Transit Visa';
-		position: absolute;
-		top: 70%;
-		left: 50%;
-		text-transform: uppercase;
-		transform: translate3d(-125%, 20%, 70px);
-		color: #fff;
-		font-size: 1em;
-		font-weight: bold;
-	}
+  .carousel {
+    position: relative;
+    padding-top: 60%;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+  }
+  .carousel__slide:nth-child(1):before {
+    content: "Study Abroad";
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    text-transform: uppercase;
+    transform: translate3d(-50%, -40%, 70px);
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .carousel__slide:nth-child(2):before {
+    content: "Family Visa";
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    text-transform: uppercase;
+    transform: translate3d(40%, -40%, 70px);
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .carousel__slide:nth-child(3):before {
+    content: "Business Visa";
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    text-transform: uppercase;
+    transform: translate3d(-95%, 20%, 70px);
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .carousel__slide:nth-child(4):before {
+    content: "Transit Visa";
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    text-transform: uppercase;
+    transform: translate3d(-125%, 20%, 70px);
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+  }
 }
 
 /* Visa Services */
 .visa-card {
-	height: 380px;
-	background-color: #f99;
+  height: 380px;
+  background-color: #f99;
 }
 .visa-card:nth-child(1) {
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-image: url('https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078284/Victoriavisaconsultants/111_e6zs8y.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078284/Victoriavisaconsultants/111_e6zs8y.jpg");
 }
 .visa-card:nth-child(2) {
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-image: url('https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078243/Victoriavisaconsultants/100_c2jcng.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078243/Victoriavisaconsultants/100_c2jcng.jpg");
 }
 .visa-card:nth-child(3) {
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-image: url('https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078290/Victoriavisaconsultants/122_vbrtym.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078290/Victoriavisaconsultants/122_vbrtym.jpg");
 }
 
 /* About Services */
 .about-card {
-	height: 250px;
-	background-color: #f99;
+  height: 250px;
+  background-color: #f99;
 }
 .about-card:nth-child(1) {
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-image: url('https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078287/Victoriavisaconsultants/107_ifa7r2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078287/Victoriavisaconsultants/107_ifa7r2.jpg");
 }
 .about-card:nth-child(2) {
-	background-color: #2b3f69;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-image: url('https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078287/Victoriavisaconsultants/110_xx2yzw.png');
+  background-color: #2b3f69;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078287/Victoriavisaconsultants/110_xx2yzw.png");
 }
 .about-card:nth-child(3) {
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-image: url('https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078283/Victoriavisaconsultants/106_tfh7ed.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078283/Victoriavisaconsultants/106_tfh7ed.jpg");
 }
 .about-card:nth-child(4) {
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-image: url('https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078284/Victoriavisaconsultants/111_e6zs8y.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078284/Victoriavisaconsultants/111_e6zs8y.jpg");
 }
 
 /* Countries we offer */
 .countries-card {
-	height: 250px;
-	background-color: #f99;
+  height: 250px;
+  background-color: #f99;
 }
 .countries-card:nth-child(1) {
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-image: url('https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078287/Victoriavisaconsultants/112_zw6vfc.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078287/Victoriavisaconsultants/112_zw6vfc.jpg");
 }
 .countries-card:nth-child(1):before {
-	content: 'Canada';
-	position: absolute;
-	top: 8%;
-	left: 55%;
-	transform: translate3d(65%, 30%, 70px);
-	color: #fff;
-	font-size: 1.2em;
+  content: "Canada";
+  position: absolute;
+  top: 8%;
+  left: 55%;
+  transform: translate3d(65%, 30%, 70px);
+  color: #fff;
+  font-size: 1.2em;
 }
 .countries-card:nth-child(2) {
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-image: url('https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078289/Victoriavisaconsultants/118_bbey6t.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078289/Victoriavisaconsultants/118_bbey6t.jpg");
 }
 .countries-card:nth-child(2):before {
-	content: 'Australia';
-	position: absolute;
-	top: 8%;
-	left: 55%;
-	transform: translate3d(65%, 30%, 70px);
-	color: #fff;
-	font-size: 1.2em;
+  content: "Australia";
+  position: absolute;
+  top: 8%;
+  left: 55%;
+  transform: translate3d(65%, 30%, 70px);
+  color: #fff;
+  font-size: 1.2em;
 }
 .countries-card:nth-child(3) {
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-image: url('https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078291/Victoriavisaconsultants/119_iiaryg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1656078291/Victoriavisaconsultants/119_iiaryg.jpg");
 }
 .countries-card:nth-child(3):before {
-	content: 'USA';
-	position: absolute;
-	top: 8%;
-	left: 65%;
-	transform: translate3d(65%, 30%, 70px);
-	color: #fff;
-	font-size: 1.2em;
+  content: "USA";
+  position: absolute;
+  top: 8%;
+  left: 65%;
+  transform: translate3d(65%, 30%, 70px);
+  color: #fff;
+  font-size: 1.2em;
 }
 .country-usa {
-	position: absolute;
-	bottom: -40px;
+  position: absolute;
+  bottom: -40px;
 }
 .country-australia,
 .country-canada {
-	position: absolute;
-	bottom: 0px;
+  position: absolute;
+  bottom: 0px;
 }
 
 /* CSS Multiple Whatsapp Chat */
 .whatsapp-name {
-	font-size: 16px;
-	font-weight: 600;
-	padding-bottom: 0;
-	margin-bottom: 0;
-	line-height: 0.5;
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  line-height: 0.5;
 }
 
 #whatsapp-chat {
-	box-sizing: border-box !important;
-	outline: none !important;
-	position: fixed;
-	width: 350px;
-	border-radius: 10px;
-	box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28);
-	bottom: 90px;
-	right: 30px;
-	overflow: hidden;
-	z-index: 99;
-	animation-name: showchat;
-	animation-duration: 1s;
-	transform: scale(1);
+  box-sizing: border-box !important;
+  outline: none !important;
+  position: fixed;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28);
+  bottom: 90px;
+  right: 30px;
+  overflow: hidden;
+  z-index: 99;
+  animation-name: showchat;
+  animation-duration: 1s;
+  transform: scale(1);
 }
 
 a.blantershow-chat {
-	/*   background: #009688; */
-	background: #fff;
-	color: #404040;
-	position: fixed;
-	display: flex;
-	font-weight: 400;
-	justify-content: space-between;
-	z-index: 98;
-	bottom: 25px;
-	right: 30px;
-	font-size: 15px;
-	padding: 10px 20px;
-	border-radius: 30px;
-	box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28);
+  /*   background: #009688; */
+  background: #fff;
+  color: #404040;
+  position: fixed;
+  display: flex;
+  font-weight: 400;
+  justify-content: space-between;
+  z-index: 98;
+  bottom: 25px;
+  right: 30px;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28);
 }
 
 a.blantershow-chat svg {
-	transform: scale(1.2);
-	margin: 0 10px 0 0;
+  transform: scale(1.2);
+  margin: 0 10px 0 0;
 }
 
 .header-chat {
-	/*   background: linear-gradient(to right top, #6f96f3, #164ed2); */
-	background: #009688;
-	background: #095e54;
-	color: #fff;
-	padding: 20px;
+  /*   background: linear-gradient(to right top, #6f96f3, #164ed2); */
+  background: #009688;
+  background: #095e54;
+  color: #fff;
+  padding: 20px;
 }
 
 .header-chat h3 {
-	margin: 0 0 10px;
+  margin: 0 0 10px;
 }
 
 .header-chat p {
-	font-size: 14px;
-	line-height: 1.7;
-	margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
 }
 
 .info-avatar {
-	position: relative;
+  position: relative;
 }
 
 .info-avatar img {
-	border-radius: 100%;
-	width: 50px;
-	float: left;
-	margin: 0 10px 0 0;
+  border-radius: 100%;
+  width: 50px;
+  float: left;
+  margin: 0 10px 0 0;
 }
 
 a.informasi {
-	padding: 20px;
-	display: block;
-	overflow: hidden;
-	animation-name: showhide;
-	animation-duration: 0.5s;
+  padding: 20px;
+  display: block;
+  overflow: hidden;
+  animation-name: showhide;
+  animation-duration: 0.5s;
 }
 
 a.informasi:hover {
-	background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 .info-chat span {
-	display: block;
+  display: block;
 }
 
 #get-label,
 span.chat-label {
-	font-size: 12px;
-	color: #888;
+  font-size: 12px;
+  color: #888;
 }
 
 #get-nama,
 span.chat-nama {
-	margin: 5px 0 0;
-	font-size: 15px;
-	font-weight: 700;
-	color: #222;
+  margin: 5px 0 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
 }
 
 #get-label,
 #get-nama {
-	color: #fff;
+  color: #fff;
 }
 
 span.my-number {
-	display: none;
+  display: none;
 }
 
 /* .blanter-msg {
@@ -591,279 +592,279 @@ span.my-number {
 	border-top: 1px solid #ddd;
   } */
 textarea#chat-input {
-	border: none;
-	font-family: 'Arial', sans-serif;
-	width: 100%;
-	height: 40px;
-	outline: none;
-	resize: none;
-	padding: 10px;
-	font-size: 14px;
+  border: none;
+  font-family: "Arial", sans-serif;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  resize: none;
+  padding: 10px;
+  font-size: 14px;
 }
 
 a#send-it {
-	width: 40px;
-	font-weight: 700;
-	padding: 10px 10px 0;
-	background: #eee;
-	/* border-radius: 10px; */
-	border-bottom-right-radius: 10px;
+  width: 40px;
+  font-weight: 700;
+  padding: 10px 10px 0;
+  background: #eee;
+  /* border-radius: 10px; */
+  border-bottom-right-radius: 10px;
 }
 a#send-it svg {
-	fill: #a6a6a6;
-	height: 24px;
-	width: 24px;
+  fill: #a6a6a6;
+  height: 24px;
+  width: 24px;
 }
 
 .first-msg {
-	background: transparent;
-	padding: 30px;
-	text-align: center;
+  background: transparent;
+  padding: 30px;
+  text-align: center;
 }
 .first-msg span {
-	background: #e2e2e2;
-	color: #333;
-	font-size: 14.2px;
-	line-height: 1.7;
-	border-radius: 10px;
-	padding: 15px 20px;
-	display: inline-block;
+  background: #e2e2e2;
+  color: #333;
+  font-size: 14.2px;
+  line-height: 1.7;
+  border-radius: 10px;
+  padding: 15px 20px;
+  display: inline-block;
 }
 
 .start-chat .blanter-msg {
-	display: flex;
+  display: flex;
 }
 
 #get-number {
-	display: none;
+  display: none;
 }
 
 a.close-chat {
-	position: absolute;
-	top: 5px;
-	right: 15px;
-	color: #fff;
-	font-size: 30px;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: #fff;
+  font-size: 30px;
 }
 
 @keyframes ZpjSY {
-	0% {
-		background-color: #b6b5ba;
-	}
-	15% {
-		background-color: #111111;
-	}
-	25% {
-		background-color: #b6b5ba;
-	}
+  0% {
+    background-color: #b6b5ba;
+  }
+  15% {
+    background-color: #111111;
+  }
+  25% {
+    background-color: #b6b5ba;
+  }
 }
 @keyframes hPhMsj {
-	15% {
-		background-color: #b6b5ba;
-	}
-	25% {
-		background-color: #111111;
-	}
-	35% {
-		background-color: #b6b5ba;
-	}
+  15% {
+    background-color: #b6b5ba;
+  }
+  25% {
+    background-color: #111111;
+  }
+  35% {
+    background-color: #b6b5ba;
+  }
 }
 @keyframes iUMejp {
-	25% {
-		background-color: #b6b5ba;
-	}
-	35% {
-		background-color: #111111;
-	}
-	45% {
-		background-color: #b6b5ba;
-	}
+  25% {
+    background-color: #b6b5ba;
+  }
+  35% {
+    background-color: #111111;
+  }
+  45% {
+    background-color: #b6b5ba;
+  }
 }
 @keyframes showhide {
-	from {
-		transform: scale(0.5);
-		opacity: 0;
-	}
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
 }
 @keyframes showchat {
-	from {
-		transform: scale(0);
-		opacity: 0;
-	}
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
 }
 @media screen and (max-width: 480px) {
-	#whatsapp-chat {
-		width: auto;
-		left: 5%;
-		right: 5%;
-		font-size: 80%;
-	}
+  #whatsapp-chat {
+    width: auto;
+    left: 5%;
+    right: 5%;
+    font-size: 80%;
+  }
 }
 .hide {
-	display: none;
-	animation-name: showhide;
-	animation-duration: 0.5s;
-	transform: scale(1);
-	opacity: 1;
+  display: none;
+  animation-name: showhide;
+  animation-duration: 0.5s;
+  transform: scale(1);
+  opacity: 1;
 }
 
 .show {
-	display: block;
-	animation-name: showhide;
-	animation-duration: 0.5s;
-	transform: scale(1);
-	opacity: 1;
+  display: block;
+  animation-name: showhide;
+  animation-duration: 0.5s;
+  transform: scale(1);
+  opacity: 1;
 }
 
 .whatsapp-message-container {
-	display: flex;
-	z-index: 1;
+  display: flex;
+  z-index: 1;
 }
 
 .whatsapp-message {
-	padding: 7px 14px 6px;
-	background-color: white;
-	border-radius: 0px 8px 8px;
-	position: relative;
-	transition: all 0.3s ease 0s;
-	opacity: 0;
-	transform-origin: center top 0px;
-	z-index: 2;
-	box-shadow: rgba(0, 0, 0, 0.13) 0px 1px 0.5px;
-	margin-top: 4px;
-	margin-left: -54px;
-	max-width: calc(100% - 66px);
+  padding: 7px 14px 6px;
+  background-color: white;
+  border-radius: 0px 8px 8px;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  transform-origin: center top 0px;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.13) 0px 1px 0.5px;
+  margin-top: 4px;
+  margin-left: -54px;
+  max-width: calc(100% - 66px);
 }
 
 .whatsapp-chat-body {
-	padding: 20px 20px 20px 10px;
-	background-color: #e6ddd4;
-	position: relative;
+  padding: 20px 20px 20px 10px;
+  background-color: #e6ddd4;
+  position: relative;
 }
 .whatsapp-chat-body::before {
-	display: block;
-	position: absolute;
-	content: '';
-	left: 0px;
-	top: 0px;
-	height: 100%;
-	width: 100%;
-	z-index: 0;
-	opacity: 0.08;
-	background-image: url('https://elfsight.com/assets/chats/patterns/whatsapp.png');
+  display: block;
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  opacity: 0.08;
+  background-image: url("https://elfsight.com/assets/chats/patterns/whatsapp.png");
 }
 
 .dAbFpq {
-	display: flex;
-	z-index: 1;
+  display: flex;
+  z-index: 1;
 }
 
 .eJJEeC {
-	background-color: white;
-	width: 52.5px;
-	height: 32px;
-	border-radius: 16px;
-	display: flex;
-	-moz-box-pack: center;
-	justify-content: center;
-	-moz-box-align: center;
-	align-items: center;
-	margin-left: 10px;
-	opacity: 0;
-	transition: all 0.1s ease 0s;
-	z-index: 1;
-	box-shadow: rgba(0, 0, 0, 0.13) 0px 1px 0.5px;
+  background-color: white;
+  width: 52.5px;
+  height: 32px;
+  border-radius: 16px;
+  display: flex;
+  -moz-box-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  align-items: center;
+  margin-left: 10px;
+  opacity: 0;
+  transition: all 0.1s ease 0s;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.13) 0px 1px 0.5px;
 }
 
 .hFENyl {
-	position: relative;
-	display: flex;
+  position: relative;
+  display: flex;
 }
 
 .ixsrax {
-	height: 5px;
-	width: 5px;
-	margin: 0px 2px;
-	border-radius: 50%;
-	display: inline-block;
-	position: relative;
-	animation-duration: 1.2s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-	top: 0px;
-	background-color: #9e9da2;
-	animation-name: ZpjSY;
+  height: 5px;
+  width: 5px;
+  margin: 0px 2px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  top: 0px;
+  background-color: #9e9da2;
+  animation-name: ZpjSY;
 }
 
 .dRvxoz {
-	height: 5px;
-	width: 5px;
-	margin: 0px 2px;
-	background-color: #b6b5ba;
-	border-radius: 50%;
-	display: inline-block;
-	position: relative;
-	animation-duration: 1.2s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-	top: 0px;
-	animation-name: hPhMsj;
+  height: 5px;
+  width: 5px;
+  margin: 0px 2px;
+  background-color: #b6b5ba;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  top: 0px;
+  animation-name: hPhMsj;
 }
 
 .kAZgZq {
-	padding: 7px 14px 6px;
-	background-color: white;
-	border-radius: 0px 8px 8px;
-	position: relative;
-	transition: all 0.3s ease 0s;
-	opacity: 0;
-	transform-origin: center top 0px;
-	z-index: 2;
-	box-shadow: rgba(0, 0, 0, 0.13) 0px 1px 0.5px;
-	margin-top: 4px;
-	margin-left: -54px;
-	max-width: calc(100% - 66px);
+  padding: 7px 14px 6px;
+  background-color: white;
+  border-radius: 0px 8px 8px;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  transform-origin: center top 0px;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.13) 0px 1px 0.5px;
+  margin-top: 4px;
+  margin-left: -54px;
+  max-width: calc(100% - 66px);
 }
 .kAZgZq::before {
-	position: absolute;
-	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAmCAMAAADp2asXAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACQUExURUxpccPDw9ra2m9vbwAAAAAAADExMf///wAAABoaGk9PT7q6uqurqwsLCycnJz4+PtDQ0JycnIyMjPf3915eXvz8/E9PT/39/RMTE4CAgAAAAJqamv////////r6+u/v7yUlJeXl5f///5ycnOXl5XNzc/Hx8f///xUVFf///+zs7P///+bm5gAAAM7Ozv///2fVensAAAAvdFJOUwCow1cBCCnqAhNAnY0WIDW2f2/hSeo99g1lBYT87vDXG8/6d8oL4sgM5szrkgl660OiZwAAAHRJREFUKM/ty7cSggAABNFVUQFzwizmjPz/39k4YuFWtm55bw7eHR6ny63+alnswT3/rIDzUSC7CrAziPYCJCsB+gbVkgDtVIDh+DsE9OTBpCtAbSBAZSEQNgWIygJ0RgJMDWYNAdYbAeKtAHODlkHIv997AkLqIVOXVU84AAAAAElFTkSuQmCC');
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	background-size: contain;
-	content: '';
-	top: 0px;
-	left: -12px;
-	width: 12px;
-	height: 19px;
+  position: absolute;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAmCAMAAADp2asXAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACQUExURUxpccPDw9ra2m9vbwAAAAAAADExMf///wAAABoaGk9PT7q6uqurqwsLCycnJz4+PtDQ0JycnIyMjPf3915eXvz8/E9PT/39/RMTE4CAgAAAAJqamv////////r6+u/v7yUlJeXl5f///5ycnOXl5XNzc/Hx8f///xUVFf///+zs7P///+bm5gAAAM7Ozv///2fVensAAAAvdFJOUwCow1cBCCnqAhNAnY0WIDW2f2/hSeo99g1lBYT87vDXG8/6d8oL4sgM5szrkgl660OiZwAAAHRJREFUKM/ty7cSggAABNFVUQFzwizmjPz/39k4YuFWtm55bw7eHR6ny63+alnswT3/rIDzUSC7CrAziPYCJCsB+gbVkgDtVIDh+DsE9OTBpCtAbSBAZSEQNgWIygJ0RgJMDWYNAdYbAeKtAHODlkHIv997AkLqIVOXVU84AAAAAElFTkSuQmCC");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  top: 0px;
+  left: -12px;
+  width: 12px;
+  height: 19px;
 }
 
 .bMIBDo {
-	font-size: 13px;
-	font-weight: 700;
-	line-height: 18px;
-	color: rgba(0, 0, 0, 0.4);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .iSpIQi {
-	font-size: 14px;
-	line-height: 19px;
-	margin-top: 4px;
-	color: #111111;
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 4px;
+  color: #111111;
 }
 
 .iSpIQi {
-	font-size: 14px;
-	line-height: 19px;
-	margin-top: 4px;
-	color: #111111;
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 4px;
+  color: #111111;
 }
 
 .cqCDVm {
-	text-align: right;
-	margin-top: 4px;
-	font-size: 12px;
-	line-height: 16px;
-	color: rgba(17, 17, 17, 0.5);
-	margin-right: -8px;
-	margin-bottom: -4px;
+  text-align: right;
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(17, 17, 17, 0.5);
+  margin-right: -8px;
+  margin-bottom: -4px;
 }
