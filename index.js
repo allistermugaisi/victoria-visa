@@ -46,6 +46,21 @@ class Paystack {
       throw error;
     }
   }
+
+  async chargeTransaction(data) {
+    try {
+      const response = await axios.post(`${this.API_URL}/charge`, data, {
+        headers: {
+          Authorization: `Bearer ${this.API_KEY}`,
+          "Content-Type": "application/json",
+        },
+      });
+      return response.data;
+    } catch (error) {
+      console.error("Error charging transaction:", error);
+      throw error;
+    }
+  }
 }
 
 const paystack = new Paystack();
@@ -71,6 +86,16 @@ app.get("/verify/:reference", async (req, res) => {
     res.status(200).json(response);
   } catch (error) {
     res.status(500).json({ error: "Error verifying transaction" });
+  }
+});
+
+app.post("/charge", async (req, res) => {
+  try {
+    const data = req.body;
+    const response = await paystack.chargeTransaction(data);
+    res.status(200).json(response);
+  } catch (error) {
+    res.status(500).json({ error: "Error charging transaction" });
   }
 });
 
