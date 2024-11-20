@@ -1,4 +1,6 @@
-const https = require("https");
+// const https = require("https");
+const http = require("http");
+console.log(process.env.LIVE_SECRET_KEY);
 
 const params = JSON.stringify({
   email: "info@victoriavisaconsultants.com",
@@ -16,7 +18,7 @@ const options = {
   },
 };
 
-const req = https
+const req = http
   .request(options, (res) => {
     let data = "";
 
@@ -36,7 +38,7 @@ const req = https
 // req.end();
 
 // Create a simple HTTP server to listen on a port
-const server = https.createServer((req, res) => {
+const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader("Content-Type", "text/plain");
   res.end("Server is running\n");
