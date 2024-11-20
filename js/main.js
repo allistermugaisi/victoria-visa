@@ -24,3 +24,55 @@ tabTogglers?.forEach(function (toggler) {
     e.target.parentElement.classList.add("border-r-2", "border-red-500");
   });
 });
+
+// const popup = new Paystack();
+
+// popup.checkout({
+//   key: "pk_domain_xxxxxx",
+//   email: "allistermugaisi@gmail.com",
+//   amount: 100,
+//   onSuccess: (transaction) => {
+//     console.log(transaction);
+//   },
+//   onLoad: (response) => {
+//     console.log("onLoad: ", response);
+//   },
+//   onCancel: () => {
+//     console.log("onCancel");
+//   },
+//   onError: (error) => {
+//     console.log("Error: ", error.message);
+//   },
+// });
+
+const popup = new Paystack();
+
+const onElementsMount = (elements) => {
+  if (elements && elements.applePay) {
+    document.querySelector("#pay-button").innerText = "More Payment Options";
+  }
+};
+
+async function payWithPaystack() {
+  try {
+    await popup.paymentRequest({
+      key: "pk_domain_xxxxxx",
+      email: "testuser@paystack.com",
+      amount: 10000,
+      currency: "NGN",
+      container: "payment-request-buttons",
+      loadPaystackCheckoutButton: "pay-button",
+      styles: {
+        theme: "dark",
+        applePay: {
+          width: "100%",
+          height: "50px",
+          borderRadius: "3px",
+          type: "plain",
+          locale: "en",
+        },
+      },
+      onElementsMount,
+    });
+  } catch (error) {}
+}

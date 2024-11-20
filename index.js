@@ -1,56 +1,80 @@
-// const https = require("https");
-const http = require("http");
-console.log(process.env.LIVE_SECRET_KEY);
+const express = require("express");
+const axios = require("axios");
+const app = express();
 
-const params = JSON.stringify({
-  email: "info@victoriavisaconsultants.com",
-  amount: "500",
+app.use(express.json());
+
+class Paystack {
+  constructor() {
+    this.API_URL = "https://api.paystack.co";
+    this.API_KEY = process.env.PAYSTACK_SECRET_KEY;
+  }
+
+  async initializeTransaction(data) {
+    try {
+      const response = await axios.post(
+        `${this.API_URL}/transaction/initialize`,
+        data,
+        {
+          headers: {
+            Authorization: `Bearer ${this.API_KEY}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Error initializing transaction:", error);
+      throw error;
+    }
+  }
+
+  async verifyTransaction(reference) {
+    try {
+      const response = await axios.get(
+        `${this.API_URL}/transaction/verify/${reference}`,
+        {
+          headers: {
+            Authorization: `Bearer ${this.API_KEY}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Error verifying transaction:", error);
+      throw error;
+    }
+  }
+}
+
+const paystack = new Paystack();
+
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "Payment server is running" });
 });
 
-const options = {
-  hostname: "api.paystack.co",
-  port: 443,
-  path: "/transaction/initialize",
-  method: "POST",
-  headers: {
-    Authorization: `Bearer ${process.env.LIVE_SECRET_KEY}`,
-    "Content-Type": "application/json",
-  },
-};
+app.post("/initialize", async (req, res) => {
+  try {
+    const data = req.body;
+    const response = await paystack.initializeTransaction(data);
+    res.status(200).json(response);
+  } catch (error) {
+    res.status(500).json({ error: "Error initializing transaction" });
+  }
+});
 
-const req = http
-  .request(options, (res) => {
-    let data = "";
-
-    res.on("data", (chunk) => {
-      data += chunk;
-    });
-
-    res.on("end", () => {
-      console.log(JSON.parse(data));
-    });
-  })
-  .on("error", (error) => {
-    console.error(error);
-  });
-
-// req.write(params);
-// req.end();
-
-// Create a simple HTTP server to listen on a port
-const server = http.createServer((req, res) => {
-  if (req.method === "GET" && req.url === "/") {
-    res.statusCode = 200;
-    res.setHeader("Content-Type", "application/json");
-    res.end(JSON.stringify({ message: "Payment server is running" }));
-  } else {
-    res.statusCode = 404;
-    res.setHeader("Content-Type", "application/json");
-    res.end(JSON.stringify({ error: "Not Found" }));
+app.get("/verify/:reference", async (req, res) => {
+  try {
+    const reference = req.params.reference;
+    const response = await paystack.verifyTransaction(reference);
+    res.status(200).json(response);
+  } catch (error) {
+    res.status(500).json({ error: "Error verifying transaction" });
   }
 });
 
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(JSON.stringify({ message: `Server running at port ${PORT}` }));
 });
