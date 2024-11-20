@@ -39,12 +39,18 @@ const req = http
 
 // Create a simple HTTP server to listen on a port
 const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/plain");
-  res.end("Server is running\n");
+  if (req.method === "GET" && req.url === "/") {
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify({ message: "Payment server is running" }));
+  } else {
+    res.statusCode = 404;
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify({ error: "Not Found" }));
+  }
 });
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
-  console.log(`Server running at port ${PORT}`);
+  console.log(JSON.stringify({ message: `Server running at port ${PORT}` }));
 });
