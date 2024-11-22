@@ -144,12 +144,143 @@
         </div>
         <!-- Button -->
         <a
-          href="#"
+          href="https://paystack.com/pay/victoriavisa"
           class="hidden lg:block px-4 py-8 text-white uppercase tracking-normal bg-red-500 baseline hover:bg-darkBlue ease-in duration-300"
           >Get Consultation</a
         >
+        <!-- <button
+          id="book_consultation"
+          class="hidden lg:block px-4 py-8 text-white uppercase tracking-normal bg-red-500 baseline hover:bg-darkBlue ease-in duration-300"
+        >
+          Book Consultation
+        </button> -->
       </div>
     </nav>
+
+    <!-- The Modal -->
+    <div
+      id="book_consultation_modal"
+      class="modal hidden fixed z-10 left-0 top-0 w-full h-full overflow-auto bg-black bg-opacity-40"
+    >
+      <!-- Modal content -->
+      <div
+        class="modal-content bg-white shadow-2xl my-[8%] mx-auto p-5 border max-w-xl w-full"
+      >
+        <div
+          id="initialize-result"
+          class="rounded shadow-sm text-sm py-2 px-4 text-green-500"
+        >
+          <!-- Appointment booked successfully -->
+        </div>
+        <div class="flex justify-between items-center">
+          <h3 class="text-darkBlue px-4 py-6 font-medium text-2xl md:text-4xl">
+            Book Appointment
+          </h3>
+          <button
+            class="close p-2 bg-gray-100 rounded-full hover:bg-gray-200 focus:outline-none"
+          >
+            <svg
+              fill="none"
+              class="h-6"
+              stroke-width="1.5"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <form class="px-4 py-2" id="paymentForm">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="mb-2 md:w-full">
+                <label
+                  htmlFor="paystack_first_name"
+                  class="block text-xs px-1 mb-2"
+                >
+                  First name
+                </label>
+                <input
+                  type="text"
+                  class="placeholder:text-sm placeholder:font-light pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
+                  placeholder="John"
+                  name="paystack_first_name"
+                  id="paystack_first_name"
+                />
+              </div>
+              <div class="mb-2 md:w-full">
+                <label
+                  htmlFor="paystack_last_name"
+                  class="block text-xs px-1 mb-2"
+                >
+                  Last name
+                </label>
+                <input
+                  type="text"
+                  class="placeholder:text-sm placeholder:font-light pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
+                  placeholder="Doe"
+                  name="paystack_last_name"
+                  id="paystack_last_name"
+                />
+              </div>
+            </div>
+            <div class="mb-2 md:w-full">
+              <label htmlFor="paystack_email" class="block text-xs px-1 mb-2">
+                Email address
+              </label>
+              <input
+                type="email"
+                class="placeholder:text-sm placeholder:font-light pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
+                placeholder="john.doe@example.com"
+                name="paystack_email"
+                id="paystack_email"
+              />
+            </div>
+            <div class="mb-2 md:w-full">
+              <label htmlFor="paystack_phone" class="block text-xs px-1 mb-2">
+                Phone number
+              </label>
+              <input
+                type="number"
+                class="placeholder:text-sm placeholder:font-light pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
+                placeholder="07012345678"
+                name="paystack_phone"
+                id="paystack_phone"
+              />
+            </div>
+            <div class="mb-0 md:w-full">
+              <label htmlFor="paystack_message" class="block text-xs px-1 mb-2">
+                Additional message
+              </label>
+              <textarea
+                id="paystack_message"
+                name="paystack_message"
+                placeholder="Your message..."
+                class="placeholder:text-sm placeholder:font-light pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[100px] rounded-sm bg-lightGray"
+              ></textarea>
+            </div>
+            <div class="mb-4">
+              <span class="text-base text-gray-900">
+                Your appointment booking fee is
+                <span class="font-semibold text-lg">KES 2000.00</span>
+              </span>
+            </div>
+            <button
+              type="submit"
+              class="px-4 py-4 w-full text-white text-center uppercase tracking-normal bg-red-500 baseline hover:bg-darkBlue md:block ease-in duration-300"
+            >
+              Pay (KES 2000)
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <section class="carousel" aria-label="Gallery">
       <ol class="carousel__viewport">
@@ -218,10 +349,6 @@
     </section>
 
     <section class="py-14">
-      <!-- Payment request buttons, styles and event listeners will be injected to this div -->
-      <div id="paystack-apple-pay"></div>
-      <button id="paystack-other-channels">More payment options</button>
-
       <div>
         <p class="text-center text-red-500 uppercase font-semibold text-lg">
           What We Offer
