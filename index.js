@@ -4,6 +4,12 @@ const app = express();
 
 app.use(express.json());
 
+// Whitelist the domain you want to allow
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  next();
+});
+
 class Paystack {
   constructor() {
     this.API_URL = "https://api.paystack.co";
