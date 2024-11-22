@@ -79,8 +79,6 @@ if (paymentForm) {
       },
     };
 
-    console.log(payloadForCard);
-
     const resultElement = document.getElementById("initialize-result");
     resultElement.innerText = ""; // Clear previous results
 
@@ -94,7 +92,7 @@ if (paymentForm) {
       });
 
       const result = await response.json();
-      console.log(result);
+
       document.getElementById("initialize-result").innerText = JSON.stringify(
         result,
         null,
@@ -130,8 +128,6 @@ if (paymentForm) {
         cancel_action: "https://www.victoriavisaconsultants.com",
       },
     };
-
-    console.log(payloadForMPESA);
 
     // https://victoria-visa.onrender.com/charge
 
