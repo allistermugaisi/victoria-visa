@@ -137,23 +137,28 @@
             >Blog</a
           >
           <a
+            href="https://paystack.com/pay/victoriavisa"
+            class="text-darkBlue hover:text-red-500 font-medium py-2 px-3 block lg:hidden"
+            >Book Consultation</a
+          >
+          <!-- <a
             href="/contact.html"
             class="text-darkBlue hover:text-red-500 font-medium py-2 px-3 block"
-            >Contact</a
-          >
+            >Book Consultation</a
+          > -->
         </div>
         <!-- Button -->
         <a
           href="https://paystack.com/pay/victoriavisa"
           class="hidden lg:block px-4 py-8 text-white uppercase tracking-normal bg-red-500 baseline hover:bg-darkBlue ease-in duration-300"
-          >Get Consultation</a
+          >Book Consultation</a
         >
-        <button
+        <!-- <button
           id="book_consultation"
-          class="hidden px-4 py-8 text-white uppercase tracking-normal bg-red-500 baseline hover:bg-darkBlue ease-in duration-300"
+          class="hidden lg:block px-4 py-8 text-white uppercase tracking-normal bg-red-500 baseline hover:bg-darkBlue ease-in duration-300"
         >
           Book Consultation
-        </button>
+        </button> -->
       </div>
     </nav>
 
@@ -230,28 +235,45 @@
                 />
               </div>
             </div>
-            <div class="mb-2 md:w-full">
-              <label htmlFor="paystack_email" class="block text-xs px-1 mb-2">
-                Email address
-              </label>
-              <input
-                type="email"
-                class="placeholder:text-sm placeholder:font-light pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
-                placeholder="john.doe@example.com"
-                name="paystack_email"
-                id="paystack_email"
-              />
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="mb-2 md:w-full">
+                <label htmlFor="paystack_email" class="block text-xs px-1 mb-2">
+                  Email address
+                </label>
+                <input
+                  type="email"
+                  class="placeholder:text-sm placeholder:font-light pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
+                  placeholder="john.doe@example.com"
+                  name="paystack_email"
+                  id="paystack_email"
+                />
+              </div>
+              <div class="mb-2 md:w-full">
+                <label htmlFor="paystack_phone" class="block text-xs px-1 mb-2">
+                  Phone number
+                </label>
+                <input
+                  type="number"
+                  class="placeholder:text-sm placeholder:font-light pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
+                  placeholder="07012345678"
+                  name="paystack_phone"
+                  id="paystack_phone"
+                />
+              </div>
             </div>
             <div class="mb-2 md:w-full">
-              <label htmlFor="paystack_phone" class="block text-xs px-1 mb-2">
-                Phone number
+              <label
+                htmlFor="paystack_appointment_date"
+                class="block text-xs px-1 mb-2"
+              >
+                Appointment date
               </label>
               <input
-                type="number"
+                type="date"
                 class="placeholder:text-sm placeholder:font-light pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
-                placeholder="07012345678"
-                name="paystack_phone"
-                id="paystack_phone"
+                placeholder=""
+                name="paystack_appointment_date"
+                id="paystack_appointment_date"
               />
             </div>
             <div class="mb-0 md:w-full">
@@ -262,7 +284,7 @@
                 id="paystack_message"
                 name="paystack_message"
                 placeholder="Your message..."
-                class="placeholder:text-sm placeholder:font-light pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[100px] rounded-sm bg-lightGray"
+                class="placeholder:text-sm placeholder:font-light pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[80px] rounded-sm bg-lightGray"
               ></textarea>
             </div>
             <div class="mb-4">
